@@ -1,0 +1,24 @@
+# Doxygen configuration for the ATmega328P definition headers.
+PROJECT_NAME           = "ATmega328p"
+PROJECT_BRIEF          = "Hardware definitions"
+OUTPUT_DIRECTORY       = docs/doxygen
+INPUT                  = include/atmega328p docs
+FILE_PATTERNS          = *.h *.md
+RECURSIVE              = YES
+EXCLUDE                = docs/doxygen
+EXCLUDE_PATTERNS       = */docs/doxygen/*
+USE_MDFILE_AS_MAINPAGE = docs/index.md
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+MARKDOWN_SUPPORT       = YES
+GENERATE_TREEVIEW      = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_XML           = NO
+QUIET                  = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = NO
+WARN_AS_ERROR          = NO

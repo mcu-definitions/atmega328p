@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['general_5fpurpose_5fregister_5fbits_0',['general_purpose_register_bits',['../namespaceatmega328p_1_1architecture.html#a22315c2e7354a92e3d0adc60e28401e1a58789e2aa9e69b397284268bb153e431',1,'atmega328p::architecture']]],
+  ['general_5fpurpose_5fregister_5fcount_1',['general_purpose_register_count',['../namespaceatmega328p_1_1architecture.html#a22315c2e7354a92e3d0adc60e28401e1ab2d1f3a342b21b0e29c1b83155fb4d6c',1,'atmega328p::architecture']]],
+  ['generalcallack_2',['GeneralCallAck',['../namespaceatmega328p_1_1twi.html#a3085b9ae99f689ab618dfa78341eee84a05460bec680b52aa988a57d656384e08',1,'atmega328p::twi']]],
+  ['generalcalldataack_3',['GeneralCallDataAck',['../namespaceatmega328p_1_1twi.html#a3085b9ae99f689ab618dfa78341eee84ae45bd18fcc95e2c83b3e5a6b48f0f5c8',1,'atmega328p::twi']]],
+  ['generalcalldatanack_4',['GeneralCallDataNack',['../namespaceatmega328p_1_1twi.html#a3085b9ae99f689ab618dfa78341eee84acae96f3ac1cd8d597299e9930a879855',1,'atmega328p::twi']]],
+  ['generalpurposeregister_5',['GeneralPurposeRegister',['../namespaceatmega328p_1_1cpu.html#a4fc6f1d192aebba8940719cbea646af6',1,'atmega328p::cpu']]],
+  ['getting_20started_6',['Getting started',['../md_docs_2getting-started.html',1,'']]],
+  ['getting_2dstarted_2emd_7',['getting-started.md',['../getting-started_8md.html',1,'']]],
+  ['globalinterrupt_8',['GlobalInterrupt',['../namespaceatmega328p_1_1cpu.html#aaa177b245277e945aa80b0ed98dea89ea7929c6ccf12b8e811c89dba8330f30de',1,'atmega328p::cpu']]],
+  ['gnd1_9',['GND1',['../namespaceatmega328p_1_1package_1_1pdip28.html#aceddeead9ab623dd899bb8d8b1e54550a1e9f120179530695ce9025f2dddf7b9b',1,'atmega328p::package::pdip28::GND1'],['../namespaceatmega328p_1_1package_1_1mlf28.html#ab7ba54ed9810b6896a7b2e1f3e8c7b32a39860971c310d000596f6b522be59047',1,'atmega328p::package::mlf28::GND1'],['../namespaceatmega328p_1_1package_1_1tqfp32.html#a70ea785be7ab34756cf6df5ffae07c22a5bf4ab6dfec52804ce5756f4d2aa5401',1,'atmega328p::package::tqfp32::GND1'],['../namespaceatmega328p_1_1package_1_1mlf32.html#ac7855a8599de041e81b816ecc85515afa1c2943f7daf7732ae51e1cee5db1b845',1,'atmega328p::package::mlf32::GND1']]],
+  ['gnd2_10',['GND2',['../namespaceatmega328p_1_1package_1_1pdip28.html#aceddeead9ab623dd899bb8d8b1e54550a66586a7accaee703ba26f18b1619e377',1,'atmega328p::package::pdip28::GND2'],['../namespaceatmega328p_1_1package_1_1mlf28.html#ab7ba54ed9810b6896a7b2e1f3e8c7b32a730a91ed53f1094d3635a82b650cc19c',1,'atmega328p::package::mlf28::GND2'],['../namespaceatmega328p_1_1package_1_1tqfp32.html#a70ea785be7ab34756cf6df5ffae07c22a6d60882a1cb5f1131cb78a127a1aace4',1,'atmega328p::package::tqfp32::GND2'],['../namespaceatmega328p_1_1package_1_1mlf32.html#ac7855a8599de041e81b816ecc85515afa86a714833b011e7a1c36d6e28c3e39de',1,'atmega328p::package::mlf32::GND2']]],
+  ['gnd3_11',['GND3',['../namespaceatmega328p_1_1package_1_1tqfp32.html#a70ea785be7ab34756cf6df5ffae07c22af59d3c05a1c3fbd7616365b348ff34cb',1,'atmega328p::package::tqfp32::GND3'],['../namespaceatmega328p_1_1package_1_1mlf32.html#ac7855a8599de041e81b816ecc85515afac86cfe9332f654fa26690ccf4e24bba1',1,'atmega328p::package::mlf32::GND3']]],
+  ['gpio_12',['GPIO',['../namespaceatmega328p_1_1pin.html#a44dc09747dd39c6e94de32b89e6056d9ad59b87e55cc11dfdfeea6e7fddd0daa9',1,'atmega328p::pin::GPIO'],['../namespaceatmega328p_1_1pin.html#aeb8f67dafa2378b7b0183c1c56403a3faa4b03abff0e37da035d6fc0f9a4b1235',1,'atmega328p::pin::GPIO']]],
+  ['gpio_20h_13',['GPIO.h',['../md_docs_2modules_2gpio.html',1,'']]],
+  ['gpio_2eh_14',['GPIO.h',['../_g_p_i_o_8h.html',1,'']]],
+  ['gpio_2emd_15',['gpio.md',['../gpio_8md.html',1,'']]],
+  ['gpio_5fline_5fcount_5fwith_5fpc6_5fas_5fgpio_16',['gpio_line_count_with_pc6_as_gpio',['../namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527ab11e80e4a921a5c69e9ef897a86a3fc3',1,'atmega328p::device']]],
+  ['gpio_5fline_5fcount_5fwith_5fpc6_5fas_5freset_17',['gpio_line_count_with_pc6_as_reset',['../namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a35d22b24cf07f3490278748e2fab04b2',1,'atmega328p::device']]],
+  ['gpior0_18',['GPIOR0',['../namespaceatmega328p_1_1register__map.html#a0fc700aa0c0c171bbedb25ce1d7bd2b2a16fe7de3aba1246125e00c4b1333f84d',1,'atmega328p::register_map']]],
+  ['gpior1_19',['GPIOR1',['../namespaceatmega328p_1_1register__map.html#a0fc700aa0c0c171bbedb25ce1d7bd2b2a98d0b414ad2395b0200bfd60cf181a6c',1,'atmega328p::register_map']]],
+  ['gpior2_20',['GPIOR2',['../namespaceatmega328p_1_1register__map.html#a0fc700aa0c0c171bbedb25ce1d7bd2b2a328c5ecab7c5f69d36a218907d6d0112',1,'atmega328p::register_map']]],
+  ['grade_21',['Grade',['../namespaceatmega328p_1_1electrical.html#afe631c392c85f9a1f5d044535838db30',1,'atmega328p::electrical']]],
+  ['ground_22',['Ground',['../namespaceatmega328p_1_1adc.html#ab8c97ba683fc3ba441f2f55dcd54cd53a3519d51443d41746a097cd54cd5c11cf',1,'atmega328p::adc']]],
+  ['gtccr_23',['GTCCR',['../namespaceatmega328p_1_1register__map.html#a0fc700aa0c0c171bbedb25ce1d7bd2b2aed7677b7490a24d66dade97a2492de99',1,'atmega328p::register_map']]]
+];
