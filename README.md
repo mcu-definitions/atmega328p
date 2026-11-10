@@ -1,4 +1,4 @@
-# atmega328p
+# ATmega328p hardware definitions
 
 A header-only C++11 library containing hardware definitions for the ATmega328P.
 
