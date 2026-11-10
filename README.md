@@ -54,28 +54,9 @@ mcu::memory::flash_size_bytes
 
 Other MCU definition repositories should follow the same namespace and member naming conventions. Their configuration header changes the alias, not the common peripheral library.
 
-## Features
-
-- C++11
-- Header-only
-- No STL or Arduino dependency
-- No runtime implementation
-- Device and feature macros use the common `MCU_*` prefix
-- C++ namespaces and constants are the primary API
-- Doxygen comments in public headers
-- Compile-only tests and usage examples
-
 ## Documentation
 
 Start with [Getting started](docs/getting-started.md), then see the [namespace map](docs/namespaces.md), [MCU configuration](docs/configuration/mcu-config.md), and [module reference](docs/index.md).
-
-## Doxygen
-
-Run `doxygen Doxyfile` at the repository root. Open `docs/doxygen/html/index.html`. Generated output is ignored by Git.
-
-## Validation
-
-Run `tests/run_tests.sh` on Linux/macOS or `tests/run_tests.bat` on Windows with `g++` available in `PATH`.
 
 ## Scope
 
