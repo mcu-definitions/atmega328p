@@ -1,34 +1,24 @@
 # Definitions model
 
-This repository describes the ATmega328P. It does not implement peripheral behavior.
+The ATmega328P headers describe device-specific hardware facts only. They do not access registers or implement peripheral operations.
 
-## Primary interface
-
-The public C++ interface uses:
-
-- the root namespace `atmega328p`;
-- short module namespaces such as `gpio`, `pin`, `timer`, `pwm`, `adc`, and `memory`;
-- lowercase `snake_case` names for numeric characteristics;
-- typed enums for hardware selections such as pins, channels, modes, and clock sources.
-
-The consuming project creates a common alias:
+## Interface
 
 ```cpp
+#include <atmega328p/ATmega328P.h>
 namespace mcu = atmega328p;
 ```
 
-Shared peripheral libraries use `mcu::gpio`, `mcu::timer`, and other common namespaces. Another MCU repository should expose the same module names and common member names where the hardware supports them.
+The library uses namespaces for hardware modules, strongly typed enums for identifiers and modes, and fixed-width integer types for register addresses and limits.
 
-## Macros
+## Register addresses
 
-Macros are reserved for package/grade selection, feature detection, and preprocessor checks. Ordinary C++ code should use namespace constants.
+`register_map` stores AVR data-space addresses. Low I/O-space instruction operands use a different offset. Register constants are not pointers and perform no reads or writes.
 
-## Package-dependent data
+## Logical pins and packages
 
-A logical pin such as `PB5` identifies the silicon signal. Its terminal number depends on the physical package. Select the package in `MCUConfig.h` and use `mcu::package::selected::PB5` for the terminal number.
+Logical pin identifiers are independent of physical package terminals. The package selected by the application controls terminal mapping through `package::selected`.
 
-The same approach is used for operating grades: `mcu::electrical::selected` refers to the selected grade profile.
+## Scope
 
-## No runtime implementation
-
-Headers contain compile-time values and enums. They do not access hardware registers, initialize peripherals, declare interrupt handlers, or allocate runtime tables.
+Hardware metadata, including capabilities and limitations, is provided at compile time. Firmware and peripheral libraries remain responsible for validating board wiring and performing hardware access.

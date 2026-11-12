@@ -108,7 +108,7 @@ var searchData=
   ['phasecorrectpwmwithicr1_105',['PhaseCorrectPWMWithICR1',['../namespaceatmega328p_1_1timer.html#a29ac99454d4d43a7e2511d9834d89c24a75e318edfa52558966824a70bc464d1b',1,'atmega328p::timer']]],
   ['phasecorrectpwmwithocr1a_106',['PhaseCorrectPWMWithOCR1A',['../namespaceatmega328p_1_1timer.html#a29ac99454d4d43a7e2511d9834d89c24a05bed7c4f679e24f86e032786edc5706',1,'atmega328p::timer']]],
   ['pin_5fchange_5fgroup_5fcount_107',['pin_change_group_count',['../namespaceatmega328p_1_1external__interrupts.html#a5a2cebdf108b8d8c7cac92da30adcea6a618ddcf8054e060f86735451f1950146',1,'atmega328p::external_interrupts']]],
-  ['pin_5fchange_5fsource_5fcount_108',['pin_change_source_count',['../namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527ac8899b9436b1dfa6fd85e68e284cc7a4',1,'atmega328p::device']]],
+  ['pin_5fchange_5fsource_5fcount_108',['pin_change_source_count',['../namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fac8899b9436b1dfa6fd85e68e284cc7a4',1,'atmega328p::device']]],
   ['pin_5fcount_109',['pin_count',['../namespaceatmega328p_1_1package_1_1pdip28.html#a9ca647fc43d660b621f38ea1f6bb0763a443ecf43037f581d8da8bbac31c53071',1,'atmega328p::package::pdip28::pin_count'],['../namespaceatmega328p_1_1package_1_1mlf28.html#a1a0f5ac954b1ddfbc91c712d9be55782ac62468d96475dd3c66572868cc1d116e',1,'atmega328p::package::mlf28::pin_count'],['../namespaceatmega328p_1_1package_1_1tqfp32.html#aadfd405db2f95e51eedf1e075c3e9951a6c06e182fc4a5cb1be1f3319618df8b0',1,'atmega328p::package::tqfp32::pin_count'],['../namespaceatmega328p_1_1package_1_1mlf32.html#a6df4d7dc661c49d98bb2c7592eb862f1a54bd2fd22558b67ae70605d7bac71854',1,'atmega328p::package::mlf32::pin_count'],['../namespaceatmega328p_1_1package_1_1unspecified.html#ab900aceeb86132d7aa5c4a7b81745d80afd664f1b7bb59cf2eb8ab10238882fca',1,'atmega328p::package::unspecified::pin_count'],['../namespaceatmega328p_1_1pin.html#a928061f3ad79fea91deaa9d0b422345aae098315d4286409f97db2324b4cf9417',1,'atmega328p::pin::pin_count']]],
   ['pinb_110',['PINB',['../namespaceatmega328p_1_1register__map.html#a0fc700aa0c0c171bbedb25ce1d7bd2b2a5feebbe14ebcbb50e0786f9d68dca571',1,'atmega328p::register_map']]],
   ['pinb0_111',['pinb0',['../namespaceatmega328p_1_1register__bits_1_1pinb.html#a89b22621871faf1d95e36a5e2bb4f814a220317c05865490199f920cc9bd0ea00',1,'atmega328p::register_bits::pinb']]],
@@ -137,7 +137,7 @@ var searchData=
   ['pind5_134',['pind5',['../namespaceatmega328p_1_1register__bits_1_1pind.html#a879868ec941069212ae7c27780f35a3faf733616f5d999f495d964c80859b9994',1,'atmega328p::register_bits::pind']]],
   ['pind6_135',['pind6',['../namespaceatmega328p_1_1register__bits_1_1pind.html#a879868ec941069212ae7c27780f35a3fa680dea90200b4a3e36ee78818ebbb7d4',1,'atmega328p::register_bits::pind']]],
   ['pind7_136',['pind7',['../namespaceatmega328p_1_1register__bits_1_1pind.html#a879868ec941069212ae7c27780f35a3fabed58c3982332a7d5c526f7ee754f028',1,'atmega328p::register_bits::pind']]],
-  ['pipeline_5fstages_137',['pipeline_stages',['../namespaceatmega328p_1_1architecture.html#a22315c2e7354a92e3d0adc60e28401e1a0d814c555500c9c9060265173b439cb8',1,'atmega328p::architecture']]],
+  ['pipeline_5fstages_137',['pipeline_stages',['../namespaceatmega328p_1_1architecture.html#a6b1a32d303d95f3b296ce1e9fb2a489ca0d814c555500c9c9060265173b439cb8',1,'atmega328p::architecture']]],
   ['porf_138',['porf',['../namespaceatmega328p_1_1register__bits_1_1mcusr.html#adc21c3db6f8733c571e5ea7ffd14f94fa56e681f7b1970305ac2c30c24c03061e',1,'atmega328p::register_bits::mcusr']]],
   ['port_5fb_5fcode_139',['port_b_code',['../namespaceatmega328p_1_1pin.html#a928061f3ad79fea91deaa9d0b422345aaa52317a2304e1396154b4df9563f7db4',1,'atmega328p::pin']]],
   ['port_5fb_5fmask_140',['port_b_mask',['../namespaceatmega328p_1_1pin.html#a928061f3ad79fea91deaa9d0b422345aa7cfc270527a4871cbd005c90b08e39d0',1,'atmega328p::pin']]],
@@ -185,8 +185,8 @@ var searchData=
   ['powersave_182',['PowerSave',['../namespaceatmega328p_1_1power.html#a70120f04d4e502776319b17cea51f9cba8697163f8ea747248247f2646bbb991c',1,'atmega328p::power']]],
   ['pradc_183',['pradc',['../namespaceatmega328p_1_1register__bits_1_1prr.html#adcb1d801bd9a03daeb8472d0ccba29a1a1ee169054f8b3ba6b467500ce50ff641',1,'atmega328p::register_bits::prr']]],
   ['prescaler_5fcount_184',['prescaler_count',['../namespaceatmega328p_1_1twi.html#a71831ff1446e45407351cc1a3f52c61ea08f145c93d9b2d0a87cee12144cbbf27',1,'atmega328p::twi']]],
-  ['program_5fcounter_5fbits_185',['program_counter_bits',['../namespaceatmega328p_1_1architecture.html#a22315c2e7354a92e3d0adc60e28401e1aa981e4e6018310d74ff86adc652e445c',1,'atmega328p::architecture']]],
-  ['programmable_5fio_5fline_5fcount_186',['programmable_io_line_count',['../namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527aca676d05885f7472d165ba80ee950d33',1,'atmega328p::device']]],
+  ['program_5fcounter_5fbits_185',['program_counter_bits',['../namespaceatmega328p_1_1architecture.html#a6b1a32d303d95f3b296ce1e9fb2a489caa981e4e6018310d74ff86adc652e445c',1,'atmega328p::architecture']]],
+  ['programmable_5fio_5fline_5fcount_186',['programmable_io_line_count',['../namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4faca676d05885f7472d165ba80ee950d33',1,'atmega328p::device']]],
   ['programmed_5fvalue_187',['programmed_value',['../namespaceatmega328p_1_1fuse.html#a23d709cf64ef5c49195728179710763fa8ed7d62e5688955196e4c22edbc19a58',1,'atmega328p::fuse']]],
   ['programmed_5fvalue_5fis_5fzero_188',['programmed_value_is_zero',['../namespaceatmega328p_1_1fuse.html#a23d709cf64ef5c49195728179710763fa2b73a1dfa1b06208f537f5302d728896',1,'atmega328p::fuse::programmed_value_is_zero'],['../namespaceatmega328p_1_1lock__bits.html#aa11e7d444065e5c4f6850dbd06751935a7da94e5455ae3931222b6b757a2c7658',1,'atmega328p::lock_bits::programmed_value_is_zero']]],
   ['programming_5fmode_5fcount_189',['programming_mode_count',['../namespaceatmega328p_1_1eeprom.html#ad4d61d360a5ab3c9ec34d85dcb82bd3eafdc8b52201d0068c29327c6af0aa84e3',1,'atmega328p::eeprom']]],
@@ -203,5 +203,5 @@ var searchData=
   ['pullups_5fselectable_5fper_5fpin_200',['pullups_selectable_per_pin',['../namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a5e03f02a6dc1aa0aa32ec9a3ceb3f655',1,'atmega328p::gpio']]],
   ['punchsingulated_201',['PunchSingulated',['../namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a914f5dfd5db55710af2b97187a067e9d',1,'atmega328p::package']]],
   ['pwm_202',['PWM',['../namespaceatmega328p_1_1pin.html#a44dc09747dd39c6e94de32b89e6056d9a2dfb5256c7f6d0eee5149ea7259ccb52',1,'atmega328p::pin']]],
-  ['pwm_5fchannel_5fcount_203',['pwm_channel_count',['../namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a8c730ed627d75aeaf95f8489ef5f3f08',1,'atmega328p::device']]]
+  ['pwm_5fchannel_5fcount_203',['pwm_channel_count',['../namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa8c730ed627d75aeaf95f8489ef5f3f08',1,'atmega328p::device']]]
 ];

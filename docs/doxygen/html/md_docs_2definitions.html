@@ -112,31 +112,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2defin
   <div class="headertitle"><div class="title">Definitions model </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md11"></a></p>
-<p>This repository describes the ATmega328P. It does not implement peripheral behavior.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
-Primary interface</h1>
-<p>The public C++ interface uses:</p>
-<ul>
-<li>the root namespace <span class="tt"><a class="el" href="namespaceatmega328p.html" title="Device-specific definitions for the ATmega328P.">atmega328p</a></span>;</li>
-<li>short module namespaces such as <span class="tt">gpio</span>, <span class="tt">pin</span>, <span class="tt">timer</span>, <span class="tt">pwm</span>, <span class="tt">adc</span>, and <span class="tt">memory</span>;</li>
-<li>lowercase <span class="tt">snake_case</span> names for numeric characteristics;</li>
-<li>typed enums for hardware selections such as pins, channels, modes, and clock sources.</li>
-</ul>
-<p>The consuming project creates a common alias:</p>
-<div class="fragment"><div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
+<div class="textblock"><p><a class="anchor" id="autotoc_md8"></a></p>
+<p>The ATmega328P headers describe device-specific hardware facts only. They do not access registers or implement peripheral operations.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Interface</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_a_tmega328_p_8h.html">atmega328p/ATmega328P.h</a>&gt;</span></div>
+<div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
+<div class="ttc" id="a_a_tmega328_p_8h_html"><div class="ttname"><a href="_a_tmega328_p_8h.html">ATmega328P.h</a></div><div class="ttdoc">Aggregate include for all ATmega328P definitions.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><p>Shared peripheral libraries use <span class="tt">mcu::gpio</span>, <span class="tt">mcu::timer</span>, and other common namespaces. Another MCU repository should expose the same module names and common member names where the hardware supports them.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
-Macros</h1>
-<p>Macros are reserved for package/grade selection, feature detection, and preprocessor checks. Ordinary C++ code should use namespace constants.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
-Package-dependent data</h1>
-<p>A logical pin such as <span class="tt">PB5</span> identifies the silicon signal. Its terminal number depends on the physical package. Select the package in <span class="tt">MCUConfig.h</span> and use <span class="tt">mcu::package::selected::PB5</span> for the terminal number.</p>
-<p>The same approach is used for operating grades: <span class="tt">mcu::electrical::selected</span> refers to the selected grade profile.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
-No runtime implementation</h1>
-<p>Headers contain compile-time values and enums. They do not access hardware registers, initialize peripherals, declare interrupt handlers, or allocate runtime tables. </p>
+</div><!-- fragment --><p>The library uses namespaces for hardware modules, strongly typed enums for identifiers and modes, and fixed-width integer types for register addresses and limits.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Register addresses</h1>
+<p><span class="tt">register_map</span> stores AVR data-space addresses. Low I/O-space instruction operands use a different offset. Register constants are not pointers and perform no reads or writes.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Logical pins and packages</h1>
+<p>Logical pin identifiers are independent of physical package terminals. The package selected by the application controls terminal mapping through <span class="tt">package::selected</span>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Scope</h1>
+<p>Hardware metadata, including capabilities and limitations, is provided at compile time. Firmware and peripheral libraries remain responsible for validating board wiring and performing hardware access. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -18,31 +18,31 @@ namespace atmega328p
         /** @brief Interrupt sources supported by the device. */
         enum class Source : uint8_t
         {
-            INT0,                   ///< External interrupt 0.
-            INT1,                   ///< External interrupt 1.
-            PCINT0,                 ///< Pin-change interrupt source 0.
-            PCINT1,                 ///< Pin-change interrupt source 1.
-            PCINT2,                 ///< Pin-change interrupt source 2.
-            Watchdog,               ///< Watchdog timeout.
-            Timer2CompareA,         ///< Timer2 compare a.
-            Timer2CompareB,         ///< Timer2 compare b.
-            Timer2Overflow,         ///< Timer2 overflow.
-            Timer1Capture,          ///< Timer1 capture.
-            Timer1CompareA,         ///< Timer1 compare a.
-            Timer1CompareB,         ///< Timer1 compare b.
-            Timer1Overflow,         ///< Timer1 overflow.
-            Timer0CompareA,         ///< Timer0 compare a.
-            Timer0CompareB,         ///< Timer0 compare b.
-            Timer0Overflow,         ///< Timer0 overflow.
-            SPITransferComplete,    ///< SPI transfer complete.
-            USARTReceiveComplete,   ///< USART receive complete.
-            USARTDataRegisterEmpty, ///< USART transmit data register empty.
-            USARTTransmitComplete,  ///< USART transmission complete.
-            ADCConversionComplete,  ///< ADC conversion complete.
-            EEPROMReady,            ///< EEPROM ready.
-            AnalogComparator,       ///< Analog comparator output event.
-            TWI,                    ///< TWI interrupt event.
-            SPMReady,               ///< Store-program-memory ready.
+            INT0 = 0,                                           ///< External interrupt 0.
+            INT1 = INT0 + 1,                                    ///< External interrupt 1.
+            PCINT0 = INT1 + 1,                                  ///< Pin-change interrupt source 0.
+            PCINT1 = PCINT0 + 1,                                ///< Pin-change interrupt source 1.
+            PCINT2 = PCINT1 + 1,                                ///< Pin-change interrupt source 2.
+            Watchdog = PCINT2 + 1,                              ///< Watchdog timeout.
+            Timer2CompareA = Watchdog + 1,                      ///< Timer2 compare a.
+            Timer2CompareB = Timer2CompareA + 1,                ///< Timer2 compare b.
+            Timer2Overflow = Timer2CompareB + 1,                ///< Timer2 overflow.
+            Timer1Capture = Timer2Overflow + 1,                 ///< Timer1 capture.
+            Timer1CompareA = Timer1Capture + 1,                 ///< Timer1 compare a.
+            Timer1CompareB = Timer1CompareA + 1,                ///< Timer1 compare b.
+            Timer1Overflow = Timer1CompareB + 1,                ///< Timer1 overflow.
+            Timer0CompareA = Timer1Overflow + 1,                ///< Timer0 compare a.
+            Timer0CompareB = Timer0CompareA + 1,                ///< Timer0 compare b.
+            Timer0Overflow = Timer0CompareB + 1,                ///< Timer0 overflow.
+            SPITransferComplete = Timer0Overflow + 1,           ///< SPI transfer complete.
+            USARTReceiveComplete = SPITransferComplete + 1,     ///< USART receive complete.
+            USARTDataRegisterEmpty = USARTReceiveComplete + 1,  ///< USART transmit data register empty.
+            USARTTransmitComplete = USARTDataRegisterEmpty + 1, ///< USART transmission complete.
+            ADCConversionComplete = USARTTransmitComplete + 1,  ///< ADC conversion complete.
+            EEPROMReady = ADCConversionComplete + 1,            ///< EEPROM ready.
+            AnalogComparator = EEPROMReady + 1,                 ///< Analog comparator output event.
+            TWI = AnalogComparator + 1,                         ///< TWI interrupt event.
+            SPMReady = TWI + 1,                                 ///< Store-program-memory ready.
         };
 
         /** @brief Vector slot numbers, including Reset. */

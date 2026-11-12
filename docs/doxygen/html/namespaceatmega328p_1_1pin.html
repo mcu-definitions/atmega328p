@@ -203,78 +203,78 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a44dc09747dd39c6e94de32b89e6056d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit flags describing a pin's available hardware functions.  <a href="#a44dc09747dd39c6e94de32b89e6056d9">More...</a><br /></td></tr>
 <tr class="memitem:aeb8f67dafa2378b7b0183c1c56403a3f" id="r_aeb8f67dafa2378b7b0183c1c56403a3f"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3f">Function</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa4b03abff0e37da035d6fc0f9a4b1235">GPIO</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faecb2c33ed5bf0c147b4094cce868cadc">PCINT0</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa120c90c7e7d5ae4a84391d0adaca8320">PCINT1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8bacd1cf61a578d44a1d2fbd9b1aa1aa">PCINT2</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa4b03abff0e37da035d6fc0f9a4b1235">GPIO</a> = 0
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faecb2c33ed5bf0c147b4094cce868cadc">PCINT0</a> = GPIO + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa120c90c7e7d5ae4a84391d0adaca8320">PCINT1</a> = PCINT0 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8bacd1cf61a578d44a1d2fbd9b1aa1aa">PCINT2</a> = PCINT1 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa90cb5100986cf95b49652adf2f91032d">PCINT3</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faca9b0519f4e4e0f0c3709b24a5fdad51">PCINT4</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa58625775b161490b5a054554a577e36">PCINT5</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa989eff0278093175795617be8b53ecca">PCINT6</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa90cb5100986cf95b49652adf2f91032d">PCINT3</a> = PCINT2 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faca9b0519f4e4e0f0c3709b24a5fdad51">PCINT4</a> = PCINT3 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa58625775b161490b5a054554a577e36">PCINT5</a> = PCINT4 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa989eff0278093175795617be8b53ecca">PCINT6</a> = PCINT5 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa0dabc5ebeb22397e77283e14a906f603">PCINT7</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa9ce3f224d86f5d3b79f1b95d9d121407">PCINT8</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faf6b7a8373608876920878c5153585842">PCINT9</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faeaebc105c0ec1506bf2929282f866e83">PCINT10</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa0dabc5ebeb22397e77283e14a906f603">PCINT7</a> = PCINT6 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa9ce3f224d86f5d3b79f1b95d9d121407">PCINT8</a> = PCINT7 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faf6b7a8373608876920878c5153585842">PCINT9</a> = PCINT8 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faeaebc105c0ec1506bf2929282f866e83">PCINT10</a> = PCINT9 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa604f0762061aa076f3dcf13fecbbcca0">PCINT11</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fafe712fbb3cf66be5e3e6c00f608681a9">PCINT12</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1d7cfd0df8be4254aa96e31233a629ff">PCINT13</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1cb89bb8f7bad56988a91c58f680a1f9">PCINT14</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa604f0762061aa076f3dcf13fecbbcca0">PCINT11</a> = PCINT10 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fafe712fbb3cf66be5e3e6c00f608681a9">PCINT12</a> = PCINT11 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1d7cfd0df8be4254aa96e31233a629ff">PCINT13</a> = PCINT12 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1cb89bb8f7bad56988a91c58f680a1f9">PCINT14</a> = PCINT13 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa416598d3902e11cadec3f7b81827031f">PCINT16</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa5c62163d869f42252b1871226a53f5c1">PCINT17</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8f5bd1a7b9cbe21599ca0ad019ab900b">PCINT18</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa45f87658f6a68923ad48a45f0a45711a">PCINT19</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa416598d3902e11cadec3f7b81827031f">PCINT16</a> = PCINT14 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa5c62163d869f42252b1871226a53f5c1">PCINT17</a> = PCINT16 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8f5bd1a7b9cbe21599ca0ad019ab900b">PCINT18</a> = PCINT17 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa45f87658f6a68923ad48a45f0a45711a">PCINT19</a> = PCINT18 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa38134892ae91ba766954b1b4e7f6cca7">PCINT20</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac40052b07ff8cd159287af55e9f0cf4a">PCINT21</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa15ab0cb6e8a09d7818713e44a4625feb">PCINT22</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa21ce12addc87dda432c1be23efb82ead">PCINT23</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa38134892ae91ba766954b1b4e7f6cca7">PCINT20</a> = PCINT19 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac40052b07ff8cd159287af55e9f0cf4a">PCINT21</a> = PCINT20 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa15ab0cb6e8a09d7818713e44a4625feb">PCINT22</a> = PCINT21 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa21ce12addc87dda432c1be23efb82ead">PCINT23</a> = PCINT22 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8842cb391bb7b8dc3bfcf1e9e6157f03">CLKO</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa6726206b5f0ccb8cd726e4edc9e710e5">ICP1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faad93fcbe00f848143bd7c5e86edf45e8">OC1A</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fad53aeb78abc83a52ab8982f5c82a3d5b">SS</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa8842cb391bb7b8dc3bfcf1e9e6157f03">CLKO</a> = PCINT23 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa6726206b5f0ccb8cd726e4edc9e710e5">ICP1</a> = CLKO + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faad93fcbe00f848143bd7c5e86edf45e8">OC1A</a> = ICP1 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fad53aeb78abc83a52ab8982f5c82a3d5b">SS</a> = OC1A + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa763fe7f9095068efb7fc8ba639ffee7b">OC1B</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fabeb9464c1bfe56dee08d2416d52158b0">MOSI</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa29698694f70bbb6f50cdc3a805865089">OC2A</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faaf0bb8ed1bca594a13e0ef70dbd1cf18">MISO</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa763fe7f9095068efb7fc8ba639ffee7b">OC1B</a> = SS + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fabeb9464c1bfe56dee08d2416d52158b0">MOSI</a> = OC1B + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa29698694f70bbb6f50cdc3a805865089">OC2A</a> = MOSI + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faaf0bb8ed1bca594a13e0ef70dbd1cf18">MISO</a> = OC2A + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa3fe7c3be61855d309ff779c829f753f4">SCK</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa764adb31385aa2d6ab3ad95a1bcd9cd3">XTAL1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa7f6da0e8930c56e3d021405a5b5ef3d4">TOSC1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac646f6bbfe1f4880aed63b8741c59055">XTAL2</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa3fe7c3be61855d309ff779c829f753f4">SCK</a> = MISO + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa764adb31385aa2d6ab3ad95a1bcd9cd3">XTAL1</a> = SCK + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa7f6da0e8930c56e3d021405a5b5ef3d4">TOSC1</a> = XTAL1 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac646f6bbfe1f4880aed63b8741c59055">XTAL2</a> = TOSC1 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac24b853d58b4770858c7c499bd683bab">TOSC2</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa22c70000e1255c6d52725b193c86e0f2">ADC0</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa976f747d78d42d75fa1a3f4c5b4fba04">ADC1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa748673a35f1920a0ecc745697e0a05c6">ADC2</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fac24b853d58b4770858c7c499bd683bab">TOSC2</a> = XTAL2 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa22c70000e1255c6d52725b193c86e0f2">ADC0</a> = TOSC2 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa976f747d78d42d75fa1a3f4c5b4fba04">ADC1</a> = ADC0 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa748673a35f1920a0ecc745697e0a05c6">ADC2</a> = ADC1 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa29b20c71258e22c14927599d8fab456">ADC3</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa46148b78618cf0c7d742426a31d250d8">ADC4</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa3b64bb83c1f3b52d2e8aa53445c304c4">ADC5</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa047b37855364f25ce01708c60aeabe37">SDA</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa29b20c71258e22c14927599d8fab456">ADC3</a> = ADC2 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa46148b78618cf0c7d742426a31d250d8">ADC4</a> = ADC3 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa3b64bb83c1f3b52d2e8aa53445c304c4">ADC5</a> = ADC4 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa047b37855364f25ce01708c60aeabe37">SDA</a> = ADC5 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa2b8544857feae7f156fd66499634c309">SCL</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fab5859d8721cfdc0312b2838b9c985bc1">RESET</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa153e2c27571301346a402b22e6f3bd1">RXD</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa039f69bf4c6e4a6b96df27b2e2a6cb3d">TXD</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa2b8544857feae7f156fd66499634c309">SCL</a> = SDA + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fab5859d8721cfdc0312b2838b9c985bc1">RESET</a> = SCL + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa153e2c27571301346a402b22e6f3bd1">RXD</a> = RESET + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa039f69bf4c6e4a6b96df27b2e2a6cb3d">TXD</a> = RXD + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa2b3c5d77db4115b8db43eda758aeae3c">INT0</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fad2c65418e75b1329409d536300aa7dda">INT1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa4e055111981699d6ee15b2eddbdee927">OC2B</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa205ac9a68da84c90d2552b5f590c667d">XCK</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa2b3c5d77db4115b8db43eda758aeae3c">INT0</a> = TXD + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fad2c65418e75b1329409d536300aa7dda">INT1</a> = INT0 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa4e055111981699d6ee15b2eddbdee927">OC2B</a> = INT1 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa205ac9a68da84c90d2552b5f590c667d">XCK</a> = OC2B + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa48788bd63a0384007cd7d089af6c610">T0</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa6e612d495c386926cf53042957ff5903">OC0B</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3face499dea30cfce118f4fe85da0227e83">T1</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa5950fb114c065ecad1783a11c4599967">OC0A</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3faa48788bd63a0384007cd7d089af6c610">T0</a> = XCK + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa6e612d495c386926cf53042957ff5903">OC0B</a> = T0 + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3face499dea30cfce118f4fe85da0227e83">T1</a> = OC0B + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa5950fb114c065ecad1783a11c4599967">OC0A</a> = T1 + 1
 , <br />
-&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1c485ad0a303fa8244dcab1db204fea8">AIN0</a>
-, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1d84c07024dd9a98a23b40bdc722d825">AIN1</a>
+&#160;&#160;<a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1c485ad0a303fa8244dcab1db204fea8">AIN0</a> = OC0A + 1
+, <a class="el" href="#aeb8f67dafa2378b7b0183c1c56403a3fa1d84c07024dd9a98a23b40bdc722d825">AIN1</a> = AIN0 + 1
 <br />
  }</td></tr>
 <tr class="memdesc:aeb8f67dafa2378b7b0183c1c56403a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternate pin function identifiers.  <a href="#aeb8f67dafa2378b7b0183c1c56403a3f">More...</a><br /></td></tr>

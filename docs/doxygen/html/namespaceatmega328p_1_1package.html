@@ -132,18 +132,18 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ac61908e81ba456e3cf2328e55bfb3ab0" id="r_ac61908e81ba456e3cf2328e55bfb3ab0"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0">Type</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0a6fcdc090caeade09d0efd6253932b6f5">Unspecified</a>
-, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0aaa5efa995e1e876f132657b81e04e40f">PDIP28</a>
-, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0aeab8d296ebb5b8c10019afcb7dcd6537">MLF28</a>
-, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0ab94576a27402423094479452c1359c94">TQFP32</a>
+&#160;&#160;<a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0a6fcdc090caeade09d0efd6253932b6f5">Unspecified</a> = 0
+, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0aaa5efa995e1e876f132657b81e04e40f">PDIP28</a> = Unspecified + 1
+, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0aeab8d296ebb5b8c10019afcb7dcd6537">MLF28</a> = PDIP28 + 1
+, <a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0ab94576a27402423094479452c1359c94">TQFP32</a> = MLF28 + 1
 , <br />
-&#160;&#160;<a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0a0eca2ea62f45825925db9d96ce874d8e">MLF32</a>
+&#160;&#160;<a class="el" href="#ac61908e81ba456e3cf2328e55bfb3ab0a0eca2ea62f45825925db9d96ce874d8e">MLF32</a> = TQFP32 + 1
 <br />
  }</td></tr>
 <tr class="memdesc:ac61908e81ba456e3cf2328e55bfb3ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported ATmega328P package types.  <a href="#ac61908e81ba456e3cf2328e55bfb3ab0">More...</a><br /></td></tr>
-<tr class="memitem:aeae00d4b4f20667517097e25731bece5" id="r_aeae00d4b4f20667517097e25731bece5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aeae00d4b4f20667517097e25731bece5">MLF32Style</a> : uint8_t { <a class="el" href="#aeae00d4b4f20667517097e25731bece5a6fcdc090caeade09d0efd6253932b6f5">Unspecified</a>
-, <a class="el" href="#aeae00d4b4f20667517097e25731bece5a914f5dfd5db55710af2b97187a067e9d">PunchSingulated</a>
-, <a class="el" href="#aeae00d4b4f20667517097e25731bece5a160626589aafd0c938869bd04c22d1f8">SawSingulated</a>
+<tr class="memitem:aeae00d4b4f20667517097e25731bece5" id="r_aeae00d4b4f20667517097e25731bece5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aeae00d4b4f20667517097e25731bece5">MLF32Style</a> : uint8_t { <a class="el" href="#aeae00d4b4f20667517097e25731bece5a6fcdc090caeade09d0efd6253932b6f5">Unspecified</a> = 0
+, <a class="el" href="#aeae00d4b4f20667517097e25731bece5a914f5dfd5db55710af2b97187a067e9d">PunchSingulated</a> = Unspecified + 1
+, <a class="el" href="#aeae00d4b4f20667517097e25731bece5a160626589aafd0c938869bd04c22d1f8">SawSingulated</a> = PunchSingulated + 1
  }</td></tr>
 <tr class="memdesc:aeae00d4b4f20667517097e25731bece5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MLF32 manufacturing styles with different land patterns.  <a href="#aeae00d4b4f20667517097e25731bece5">More...</a><br /></td></tr>
 <tr class="memitem:ad3c4e46a8668dc3fb138ba45c1c5d32f" id="r_ad3c4e46a8668dc3fb138ba45c1c5d32f"><td class="memItemLeft"><a class="el" href="#ad3c4e46a8668dc3fb138ba45c1c5d32f">enum </a>&#160;</td><td class="memItemRight">: uint8_t { <a class="el" href="#ad3c4e46a8668dc3fb138ba45c1c5d32fac23b5ba8f4a77af6b7323f442b5178e8">supported_package_count</a> = 4

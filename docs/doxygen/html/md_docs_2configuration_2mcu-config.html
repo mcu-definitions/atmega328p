@@ -113,21 +113,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2confi
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md7"></a></p>
-<p><span class="tt">MCUConfig.h</span> belongs to the consuming firmware or operating-system project. It records which MCU is fitted to the board and the values selected for that board.</p>
-<p>The definitions repository provides the available hardware facts. It does not choose the board configuration for the developer.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
-Example</h1>
+<p>The consuming firmware owns this configuration. Define target-specific values before including the device headers.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#ifndef MCU_CONFIG_H</span></div>
 <div class="line"><span class="preprocessor">#define MCU_CONFIG_H</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define MCU_PACKAGE_PDIP28</span></div>
 <div class="line"><span class="preprocessor">#define MCU_GRADE_INDUSTRIAL_85C</span></div>
-<div class="line"> </div>
 <div class="line"><span class="preprocessor">#define MCU_CLOCK_HZ 1000000UL</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_LOW 0x62</span></div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_HIGH 0xD9</span></div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_EXT 0xFF</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_a_tmega328_p_8h.html">atmega328p/ATmega328P.h</a>&gt;</span></div>
 <div class="line"> </div>
@@ -136,41 +128,23 @@ Example</h1>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_a_tmega328_p_8h_html"><div class="ttname"><a href="_a_tmega328_p_8h.html">ATmega328P.h</a></div><div class="ttdoc">Aggregate include for all ATmega328P definitions.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
-What each value means</h1>
-<table class="markdownTable">
+</div><!-- fragment --><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Setting  </th><th class="markdownTableHeadNone">Meaning  </th></tr>
+<th class="markdownTableHeadNone">Setting  </th><th class="markdownTableHeadNone">Purpose  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">MCU_PACKAGE_PDIP28</span>  </td><td class="markdownTableBodyNone">Physical package fitted to the board  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">MCU_PACKAGE_PDIP28</span>  </td><td class="markdownTableBodyNone">Physical package selection  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">MCU_GRADE_INDUSTRIAL_85C</span>  </td><td class="markdownTableBodyNone">Ordering grade of the device  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">MCU_GRADE_INDUSTRIAL_85C</span>  </td><td class="markdownTableBodyNone">Device operating grade  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">MCU_CLOCK_HZ</span>  </td><td class="markdownTableBodyNone">Expected CPU frequency immediately after reset  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">MCU_CLOCK_HZ</span>  </td><td class="markdownTableBodyNone">Expected CPU clock, supplied by the board  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">MCU_FUSE_LOW</span>  </td><td class="markdownTableBodyNone">Intended Low Fuse byte  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">MCU_FUSE_HIGH</span>  </td><td class="markdownTableBodyNone">Intended High Fuse byte  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">MCU_FUSE_EXT</span>  </td><td class="markdownTableBodyNone">Intended Extended Fuse byte  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">namespace mcu = <a class="el" href="namespaceatmega328p.html" title="Device-specific definitions for the ATmega328P.">atmega328p</a></span>  </td><td class="markdownTableBodyNone">Common namespace used by peripheral libraries  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">namespace mcu = <a class="el" href="namespaceatmega328p.html" title="Device-specific definitions for the ATmega328P.">atmega328p</a></span>  </td><td class="markdownTableBodyNone">Short alias for this device's definitions  </td></tr>
 </table>
-<p>The example uses the internal calibrated 8 MHz RC oscillator with CKDIV8 enabled, resulting in a nominal 1 MHz CPU clock after reset. The fuse bytes are the factory reference values. Check the actual oscillator circuit, ordering code, and desired boot/reset behavior before using them.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
-Why the alias matters</h1>
-<p>The ATmega8A repository can use <span class="tt">namespace mcu = atmega8a;</span>. A common GPIO library can continue to use <span class="tt">mcu::gpio</span> without being rewritten for every MCU.</p>
-<p>Only one MCU should be selected in a build. Keep the alias and configuration in one shared header. </p>
+<p>Fuse values may be provided as board-specific macros, but the library does not program them.</p>
+<p>The default example represents a nominal 1 MHz CPU clock when the factory CKDIV8 setting is in effect. Confirm the oscillator, fuse values and clock on the actual board. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

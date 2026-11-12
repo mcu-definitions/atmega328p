@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespaceatmeg
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths and bit masks.  
+<p><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths, valid masks and data-space addresses.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -128,10 +128,49 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e">d_mask</a> = 0xFF
 <br />
  }</td></tr>
+<tr class="memitem:ad37b6e4d50725778b9385082fae28e87" id="r_ad37b6e4d50725778b9385082fae28e87"><td class="memItemLeft"><a class="el" href="#ad37b6e4d50725778b9385082fae28e87">enum </a>&#160;</td><td class="memItemRight">: uint16_t { <br />
+&#160;&#160;<a class="el" href="#ad37b6e4d50725778b9385082fae28e87a0353acac1f3cd41e7d39c842a844b4df">b_input_register</a> = register_map::PINB
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87abc634813c06f34d9c129230ae67c782f">b_direction_register</a> = register_map::DDRB
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87a227767dd86701e7d1eb52ab4c9f1ac9b">b_output_register</a> = register_map::PORTB
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87ad44dc1534072d85224ee5ac5bbdefb47">c_input_register</a> = register_map::PINC
+, <br />
+&#160;&#160;<a class="el" href="#ad37b6e4d50725778b9385082fae28e87ad98d1ad3b39429644165c06495efa01d">c_direction_register</a> = register_map::DDRC
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87a27cffe75c1045a977c13e7dfd48844b3">c_output_register</a> = register_map::PORTC
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87a1f1cc2026c0c366c0468142281d9c8ec">d_input_register</a> = register_map::PIND
+, <a class="el" href="#ad37b6e4d50725778b9385082fae28e87ab076def0f7460c4bf518bc95de1bffc6">d_direction_register</a> = register_map::DDRD
+, <br />
+&#160;&#160;<a class="el" href="#ad37b6e4d50725778b9385082fae28e87a09f2e49f1b273ffd1eaea2c7349dc8ca">d_output_register</a> = register_map::PORTD
+<br />
+ }</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths and bit masks. </p>
+<div class="textblock"><p><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths, valid masks and data-space addresses. </p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad37b6e4d50725778b9385082fae28e87" name="ad37b6e4d50725778b9385082fae28e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37b6e4d50725778b9385082fae28e87">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : uint16_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87a0353acac1f3cd41e7d39c842a844b4df" name="ad37b6e4d50725778b9385082fae28e87a0353acac1f3cd41e7d39c842a844b4df"></a>b_input_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87abc634813c06f34d9c129230ae67c782f" name="ad37b6e4d50725778b9385082fae28e87abc634813c06f34d9c129230ae67c782f"></a>b_direction_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87a227767dd86701e7d1eb52ab4c9f1ac9b" name="ad37b6e4d50725778b9385082fae28e87a227767dd86701e7d1eb52ab4c9f1ac9b"></a>b_output_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87ad44dc1534072d85224ee5ac5bbdefb47" name="ad37b6e4d50725778b9385082fae28e87ad44dc1534072d85224ee5ac5bbdefb47"></a>c_input_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87ad98d1ad3b39429644165c06495efa01d" name="ad37b6e4d50725778b9385082fae28e87ad98d1ad3b39429644165c06495efa01d"></a>c_direction_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87a27cffe75c1045a977c13e7dfd48844b3" name="ad37b6e4d50725778b9385082fae28e87a27cffe75c1045a977c13e7dfd48844b3"></a>c_output_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87a1f1cc2026c0c366c0468142281d9c8ec" name="ad37b6e4d50725778b9385082fae28e87a1f1cc2026c0c366c0468142281d9c8ec"></a>d_input_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87ab076def0f7460c4bf518bc95de1bffc6" name="ad37b6e4d50725778b9385082fae28e87ab076def0f7460c4bf518bc95de1bffc6"></a>d_direction_register&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad37b6e4d50725778b9385082fae28e87a09f2e49f1b273ffd1eaea2c7349dc8ca" name="ad37b6e4d50725778b9385082fae28e87a09f2e49f1b273ffd1eaea2c7349dc8ca"></a>d_output_register&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="ae5faea9a2d6ac6ca564d6f578b269079" name="ae5faea9a2d6ac6ca564d6f578b269079"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5faea9a2d6ac6ca564d6f578b269079">&#9670;&#160;</a></span>anonymous enum</h2>
 
@@ -144,18 +183,12 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a461b661de4da2a517bfcef11c5910efb" name="ae5faea9a2d6ac6ca564d6f578b269079a461b661de4da2a517bfcef11c5910efb"></a>b_width&#160;</td><td class="fielddoc"><p>B width. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a297b85311a8669a2a216ffcfd557db3b" name="ae5faea9a2d6ac6ca564d6f578b269079a297b85311a8669a2a216ffcfd557db3b"></a>c_width&#160;</td><td class="fielddoc"><p>C width. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a61bc839243ecc6c64bebbc9efc316fbb" name="ae5faea9a2d6ac6ca564d6f578b269079a61bc839243ecc6c64bebbc9efc316fbb"></a>d_width&#160;</td><td class="fielddoc"><p>D width. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a2507c39e586518066770245720213d6f" name="ae5faea9a2d6ac6ca564d6f578b269079a2507c39e586518066770245720213d6f"></a>b_mask&#160;</td><td class="fielddoc"><p>B mask. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079acea07ad4f0d5d00ce84f3ba8bc378e50" name="ae5faea9a2d6ac6ca564d6f578b269079acea07ad4f0d5d00ce84f3ba8bc378e50"></a>c_mask&#160;</td><td class="fielddoc"><p>C mask. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e" name="ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e"></a>d_mask&#160;</td><td class="fielddoc"><p>D mask. </p>
-</td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a461b661de4da2a517bfcef11c5910efb" name="ae5faea9a2d6ac6ca564d6f578b269079a461b661de4da2a517bfcef11c5910efb"></a>b_width&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a297b85311a8669a2a216ffcfd557db3b" name="ae5faea9a2d6ac6ca564d6f578b269079a297b85311a8669a2a216ffcfd557db3b"></a>c_width&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a61bc839243ecc6c64bebbc9efc316fbb" name="ae5faea9a2d6ac6ca564d6f578b269079a61bc839243ecc6c64bebbc9efc316fbb"></a>d_width&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a2507c39e586518066770245720213d6f" name="ae5faea9a2d6ac6ca564d6f578b269079a2507c39e586518066770245720213d6f"></a>b_mask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079acea07ad4f0d5d00ce84f3ba8bc378e50" name="ae5faea9a2d6ac6ca564d6f578b269079acea07ad4f0d5d00ce84f3ba8bc378e50"></a>c_mask&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e" name="ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e"></a>d_mask&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

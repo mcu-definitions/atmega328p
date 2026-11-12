@@ -113,10 +113,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_g_p_i_o_8h.ht
 </div><!--header-->
 <div class="contents">
 
-<p>GPIO port characteristics and hardware limitations.  
+<p>GPIO port characteristics and register addresses.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_pin_8h_source.html">Pin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_register_map_8h_source.html">RegisterMap.h</a>&quot;</code><br />
 </div>
 <p><a href="_g_p_i_o_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -125,9 +126,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:atmega328p" id="r_atmega328p"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p.html">atmega328p</a></td></tr>
 <tr class="memdesc:namespaceatmega328p"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device-specific definitions for the ATmega328P. <br /></td></tr>
 <tr class="memitem:atmega328p_3A_3Agpio" id="r_atmega328p_3A_3Agpio"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1gpio.html">atmega328p::gpio</a></td></tr>
-<tr class="memdesc:namespaceatmega328p_1_1gpio"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO characteristics of the ATmega328P. <br /></td></tr>
+<tr class="memdesc:namespaceatmega328p_1_1gpio"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO characteristics. <br /></td></tr>
 <tr class="memitem:atmega328p_3A_3Agpio_3A_3Aport" id="r_atmega328p_3A_3Agpio_3A_3Aport"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html">atmega328p::gpio::port</a></td></tr>
-<tr class="memdesc:namespaceatmega328p_1_1gpio_1_1port"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths and bit masks. <br /></td></tr>
+<tr class="memdesc:namespaceatmega328p_1_1gpio_1_1port"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceatmega328p_1_1gpio.html#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths, valid masks and data-space addresses. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -142,11 +143,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc">atmega328p::gpio::has_global_pullup_disable</a> = 1
 , <br />
 &#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e">atmega328p::gpio::ports_tristated_during_reset</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a716b042233bb1e752ad2dbf67109d7ee">atmega328p::gpio::has_adc_digital_input_disable</a> = 1
 , <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6">atmega328p::gpio::has_digital_input_disable_adc0_to_adc5</a> = 1
 , <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2">atmega328p::gpio::has_digital_input_disable_ain0_ain1</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635">atmega328p::gpio::has_adc6_adc7_digital_input_buffer</a> = 0
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d">atmega328p::gpio::pc6_requires_rstdisbl</a> = 1
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635">atmega328p::gpio::has_adc6_adc7_digital_input_buffer</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d">atmega328p::gpio::pc6_requires_rstdisbl</a> = 1
 , <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432">atmega328p::gpio::pc6_is_reset_by_default</a> = 1
 , <a class="el" href="namespaceatmega328p_1_1gpio.html#afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075">atmega328p::gpio::pb6_pb7_may_be_used_by_system_clock</a> = 1
 <br />
@@ -161,9 +163,23 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ae5faea9a2d6ac6ca564d6f578b269079a16f846324145890223aef33ecdfc893e">atmega328p::gpio::port::d_mask</a> = 0xFF
 <br />
  }</td></tr>
+<tr class="memitem:ad37b6e4d50725778b9385082fae28e87" id="r_ad37b6e4d50725778b9385082fae28e87"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87">enum </a>&#160;</td><td class="memItemRight">: uint16_t { <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87a0353acac1f3cd41e7d39c842a844b4df">atmega328p::gpio::port::b_input_register</a> = register_map::PINB
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87abc634813c06f34d9c129230ae67c782f">atmega328p::gpio::port::b_direction_register</a> = register_map::DDRB
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87a227767dd86701e7d1eb52ab4c9f1ac9b">atmega328p::gpio::port::b_output_register</a> = register_map::PORTB
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87ad44dc1534072d85224ee5ac5bbdefb47">atmega328p::gpio::port::c_input_register</a> = register_map::PINC
+, <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87ad98d1ad3b39429644165c06495efa01d">atmega328p::gpio::port::c_direction_register</a> = register_map::DDRC
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87a27cffe75c1045a977c13e7dfd48844b3">atmega328p::gpio::port::c_output_register</a> = register_map::PORTC
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87a1f1cc2026c0c366c0468142281d9c8ec">atmega328p::gpio::port::d_input_register</a> = register_map::PIND
+, <a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87ab076def0f7460c4bf518bc95de1bffc6">atmega328p::gpio::port::d_direction_register</a> = register_map::DDRD
+, <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html#ad37b6e4d50725778b9385082fae28e87a09f2e49f1b273ffd1eaea2c7349dc8ca">atmega328p::gpio::port::d_output_register</a> = register_map::PORTD
+<br />
+ }</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>GPIO port characteristics and hardware limitations. </p>
+<div class="textblock"><p>GPIO port characteristics and register addresses. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

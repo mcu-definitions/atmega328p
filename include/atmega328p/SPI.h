@@ -28,15 +28,15 @@ namespace atmega328p
         /** @brief SPI bit-transfer order. */
         enum class BitOrder : uint8_t
         {
-            MostSignificantFirst,  ///< Transmit most-significant bit first.
-            LeastSignificantFirst, ///< Transmit least-significant bit first.
+            MostSignificantFirst = 0,                         ///< Transmit most-significant bit first.
+            LeastSignificantFirst = MostSignificantFirst + 1, ///< Transmit least-significant bit first.
         };
 
         /** @brief SPI controller roles. */
         enum class Role : uint8_t
         {
-            Master, ///< Controller provides SPI clock.
-            Slave,  ///< Peripheral receives SPI clock.
+            Master = 0,         ///< Controller provides SPI clock.
+            Slave = Master + 1, ///< Peripheral receives SPI clock.
         };
 
         /** @brief Supported SPI clock divisors. */

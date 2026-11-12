@@ -112,18 +112,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2modul
   <div class="headertitle"><div class="title">ATmega328P.h </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md33"></a></p>
-<p><b>Purpose:</b> Includes the complete public definition set.</p>
-<p>Use this header when a library needs several parts of the device description. For a smaller dependency, include only the required module header.</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md28"></a></p>
+<p>Aggregate include for the ATmega328P definitions. It includes all public hardware metadata modules, without runtime initialization or register access.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_a_tmega328_p_8h.html">atmega328p/ATmega328P.h</a>&gt;</span></div>
-<div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::memory::flash_size_bytes == 32768UL, <span class="stringliteral">&quot;Flash size&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::port_count == 3, <span class="stringliteral">&quot;GPIO ports&quot;</span>);</div>
 <div class="ttc" id="a_a_tmega328_p_8h_html"><div class="ttname"><a href="_a_tmega328_p_8h.html">ATmega328P.h</a></div><div class="ttdoc">Aggregate include for all ATmega328P definitions.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><p>The aggregate header does not initialize the MCU or access its registers. </p>
+</div><!-- fragment --><p>The header does not define an additional nested namespace. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

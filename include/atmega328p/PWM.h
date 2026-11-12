@@ -31,9 +31,9 @@ namespace atmega328p
         /** @brief Peripheral operating modes. */
         enum class Mode : uint8_t
         {
-            Fast,                     ///< Single-slope fast PWM.
-            PhaseCorrect,             ///< Dual-slope phase-correct PWM.
-            PhaseAndFrequencyCorrect, ///< Dual-slope phase/frequency-correct PWM.
+            Fast = 0,                                    ///< Single-slope fast PWM.
+            PhaseCorrect = Fast + 1,                     ///< Dual-slope phase-correct PWM.
+            PhaseAndFrequencyCorrect = PhaseCorrect + 1, ///< Dual-slope phase/frequency-correct PWM.
         };
 
         /** @brief Logical pins carrying the output-compare channels. */

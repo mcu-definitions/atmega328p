@@ -131,20 +131,20 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ac8d0676bc7bc363eb4c867b656381067" id="r_ac8d0676bc7bc363eb4c867b656381067"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067">atmega328p::clock::Source</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a14ee9760e49bcbcdf1fd53dacf282df8">atmega328p::clock::ExternalClock</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067ab99a5af6b2bbba59e0c1479b06bddd08">atmega328p::clock::LowPowerCrystal</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a57dcad00e25bd318c61968c6d9dbc503">atmega328p::clock::FullSwingCrystal</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a84efe54515f689aa61cf4769914d378d">atmega328p::clock::LowFrequencyCrystal</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a14ee9760e49bcbcdf1fd53dacf282df8">atmega328p::clock::ExternalClock</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067ab99a5af6b2bbba59e0c1479b06bddd08">atmega328p::clock::LowPowerCrystal</a> = ExternalClock + 1
+, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a57dcad00e25bd318c61968c6d9dbc503">atmega328p::clock::FullSwingCrystal</a> = LowPowerCrystal + 1
+, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a84efe54515f689aa61cf4769914d378d">atmega328p::clock::LowFrequencyCrystal</a> = FullSwingCrystal + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a7ffa0804f66f866fce819b4bba22ba21">atmega328p::clock::InternalCalibratedRC</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a5201449d376da3bc990a1360d784c8e1">atmega328p::clock::Internal128kHzRC</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a7ffa0804f66f866fce819b4bba22ba21">atmega328p::clock::InternalCalibratedRC</a> = LowFrequencyCrystal + 1
+, <a class="el" href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a5201449d376da3bc990a1360d784c8e1">atmega328p::clock::Internal128kHzRC</a> = InternalCalibratedRC + 1
 <br />
  }</td></tr>
 <tr class="memdesc:ac8d0676bc7bc363eb4c867b656381067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock or interrupt source identifiers.  <a href="namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067">More...</a><br /></td></tr>
-<tr class="memitem:a3da9f728221dfcb1ea69920dc6593c28" id="r_a3da9f728221dfcb1ea69920dc6593c28"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28">atmega328p::clock::Domain</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28a2b55387dd066c5bac646ac61543d152d">atmega328p::clock::CPU</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28acf3882f1c43ab22bff0bd9d82d83251b">atmega328p::clock::IO</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28abf2c44e6fc09515648b91b1bb4ec3f5f">atmega328p::clock::Flash</a>
-, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28a72c1bba79e6502c017bd14bc00a68491">atmega328p::clock::ADC</a>
+<tr class="memitem:a3da9f728221dfcb1ea69920dc6593c28" id="r_a3da9f728221dfcb1ea69920dc6593c28"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28">atmega328p::clock::Domain</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28a2b55387dd066c5bac646ac61543d152d">atmega328p::clock::CPU</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28acf3882f1c43ab22bff0bd9d82d83251b">atmega328p::clock::IO</a> = CPU + 1
+, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28abf2c44e6fc09515648b91b1bb4ec3f5f">atmega328p::clock::Flash</a> = IO + 1
+, <a class="el" href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28a72c1bba79e6502c017bd14bc00a68491">atmega328p::clock::ADC</a> = Flash + 1
  }</td></tr>
 <tr class="memdesc:a3da9f728221dfcb1ea69920dc6593c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock domains.  <a href="namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28">More...</a><br /></td></tr>
 <tr class="memitem:a3fd61cb4eed129db621cb03950eb8d78" id="r_a3fd61cb4eed129db621cb03950eb8d78"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78">atmega328p::clock::CKSELCode</a> : uint8_t { <br />

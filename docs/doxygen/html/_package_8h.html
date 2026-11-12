@@ -141,18 +141,18 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ac61908e81ba456e3cf2328e55bfb3ab0" id="r_ac61908e81ba456e3cf2328e55bfb3ab0"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0">atmega328p::package::Type</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0a6fcdc090caeade09d0efd6253932b6f5">atmega328p::package::Unspecified</a>
-, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0aaa5efa995e1e876f132657b81e04e40f">atmega328p::package::PDIP28</a>
-, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0aeab8d296ebb5b8c10019afcb7dcd6537">atmega328p::package::MLF28</a>
-, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0ab94576a27402423094479452c1359c94">atmega328p::package::TQFP32</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0a6fcdc090caeade09d0efd6253932b6f5">atmega328p::package::Unspecified</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0aaa5efa995e1e876f132657b81e04e40f">atmega328p::package::PDIP28</a> = Unspecified + 1
+, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0aeab8d296ebb5b8c10019afcb7dcd6537">atmega328p::package::MLF28</a> = PDIP28 + 1
+, <a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0ab94576a27402423094479452c1359c94">atmega328p::package::TQFP32</a> = MLF28 + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0a0eca2ea62f45825925db9d96ce874d8e">atmega328p::package::MLF32</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0a0eca2ea62f45825925db9d96ce874d8e">atmega328p::package::MLF32</a> = TQFP32 + 1
 <br />
  }</td></tr>
 <tr class="memdesc:ac61908e81ba456e3cf2328e55bfb3ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported ATmega328P package types.  <a href="namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0">More...</a><br /></td></tr>
-<tr class="memitem:aeae00d4b4f20667517097e25731bece5" id="r_aeae00d4b4f20667517097e25731bece5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5">atmega328p::package::MLF32Style</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a6fcdc090caeade09d0efd6253932b6f5">atmega328p::package::Unspecified</a>
-, <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a914f5dfd5db55710af2b97187a067e9d">atmega328p::package::PunchSingulated</a>
-, <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a160626589aafd0c938869bd04c22d1f8">atmega328p::package::SawSingulated</a>
+<tr class="memitem:aeae00d4b4f20667517097e25731bece5" id="r_aeae00d4b4f20667517097e25731bece5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5">atmega328p::package::MLF32Style</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a6fcdc090caeade09d0efd6253932b6f5">atmega328p::package::Unspecified</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a914f5dfd5db55710af2b97187a067e9d">atmega328p::package::PunchSingulated</a> = Unspecified + 1
+, <a class="el" href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a160626589aafd0c938869bd04c22d1f8">atmega328p::package::SawSingulated</a> = PunchSingulated + 1
  }</td></tr>
 <tr class="memdesc:aeae00d4b4f20667517097e25731bece5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MLF32 manufacturing styles with different land patterns.  <a href="namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5">More...</a><br /></td></tr>
 <tr class="memitem:a9ca647fc43d660b621f38ea1f6bb0763" id="r_a9ca647fc43d660b621f38ea1f6bb0763"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1package_1_1pdip28.html#a9ca647fc43d660b621f38ea1f6bb0763">enum </a>&#160;</td><td class="memItemRight">: uint8_t { <br />

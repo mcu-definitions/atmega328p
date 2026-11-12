@@ -1,22 +1,25 @@
 /**
  * @file Device.h
- * @brief Device identity and peripheral counts.
+ * @brief Hardware resources, capabilities and device signature.
  */
 
 #ifndef ATMEGA328P_DEFINITIONS_DEVICE_H
 #define ATMEGA328P_DEFINITIONS_DEVICE_H
 
+#include <stdint.h>
 #include "Config.h"
 
-/** @brief Device-specific definitions for the ATmega328P. */
 namespace atmega328p
 {
-    /** @brief General ATmega328P device information. */
+    /** @brief Device information. */
     namespace device
     {
-        enum : unsigned char
+        /** @brief Hardware resource counts. */
+        enum : uint8_t
         {
             programmable_io_line_count = 23,
+            gpio_line_count = 23,
+            gpio_line_count_default = 22,
             gpio_line_count_with_pc6_as_reset = 22,
             gpio_line_count_with_pc6_as_gpio = 23,
             timer_count = 3,
@@ -32,8 +35,8 @@ namespace atmega328p
             pin_change_source_count = 23
         };
 
-        /** @brief Peripheral presence flags. */
-        enum : unsigned char
+        /** @brief Peripheral availability flags. */
+        enum : uint8_t
         {
             has_gpio = 1,
             has_adc = 1,
@@ -41,6 +44,9 @@ namespace atmega328p
             has_timer0 = 1,
             has_timer1 = 1,
             has_timer2 = 1,
+            has_timer3 = 0,
+            has_timer4 = 0,
+            has_timer5 = 0,
             has_usart = 1,
             has_spi = 1,
             has_twi = 1,
@@ -49,10 +55,13 @@ namespace atmega328p
             has_external_interrupts = 1,
             has_pin_change_interrupts = 1,
             has_debugwire = 1,
+            has_jtag = 0,
+            has_external_memory_interface = 0,
             has_self_programmable_flash = 1
         };
 
-        enum : unsigned char
+        /** @brief Device signature and identification. */
+        enum : uint16_t
         {
             signature_byte_0 = 0x1E,
             signature_byte_1 = 0x95,

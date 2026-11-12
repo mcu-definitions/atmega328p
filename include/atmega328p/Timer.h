@@ -164,13 +164,17 @@ namespace atmega328p
 
         enum : uint8_t
         {
-            timer_count = 3U,                  ///< Number of timer.
-            timer0_counter_bits = 8U,          ///< Timer0 counter width (bits).
-            timer1_counter_bits = 16U,         ///< Timer1 counter width (bits).
-            timer2_counter_bits = 8U,          ///< Timer2 counter width (bits).
-            timer0_compare_channel_count = 2U, ///< Number of timer0 compare channel.
-            timer1_compare_channel_count = 2U, ///< Number of timer1 compare channel.
-            timer2_compare_channel_count = 2U, ///< Number of timer2 compare channel.
+            timer_count = 3U,
+            timer8_count = 2U,
+            timer16_count = 1U,
+            output_compare_8bit_channel_count = 4U,
+            output_compare_16bit_channel_count = 2U, ///< Number of timer.
+            timer0_counter_bits = 8U,                ///< Timer0 counter width (bits).
+            timer1_counter_bits = 16U,               ///< Timer1 counter width (bits).
+            timer2_counter_bits = 8U,                ///< Timer2 counter width (bits).
+            timer0_compare_channel_count = 2U,       ///< Number of timer0 compare channel.
+            timer1_compare_channel_count = 2U,       ///< Number of timer1 compare channel.
+            timer2_compare_channel_count = 2U,       ///< Number of timer2 compare channel.
         };
 
         enum : uint16_t

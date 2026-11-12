@@ -112,19 +112,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2macro
   <div class="headertitle"><div class="title">Macros </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md27"></a></p>
-<p>Macros are limited to device selection, feature detection, and preprocessor checks. C++ namespaces and constants are the primary interface.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
-Defined by the ATmega328P definitions</h1>
-<p><span class="tt"><a class="el" href="_config_8h.html" title="Selects the ATmega328P package and operating grade.">Config.h</a></span> identifies the device:</p>
-<div class="fragment"><div class="line"><a class="code hl_define" href="_config_8h.html#a1167582367ebdaf8b9277bf07b9ef7ff">MCU_ATMEGA328P</a></div>
-<div class="ttc" id="a_config_8h_html_a1167582367ebdaf8b9277bf07b9ef7ff"><div class="ttname"><a href="_config_8h.html#a1167582367ebdaf8b9277bf07b9ef7ff">MCU_ATMEGA328P</a></div><div class="ttdeci">#define MCU_ATMEGA328P</div><div class="ttdoc">Identifies the selected device.</div><div class="ttdef"><b>Definition</b> Config.h:10</div></div>
-</div><!-- fragment --><p>It also defines generic feature flags:</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md22"></a></p>
+<p>The device definitions expose <span class="tt"><a class="el" href="_config_8h.html#a1167582367ebdaf8b9277bf07b9ef7ff" title="Identifies the selected device.">MCU_ATMEGA328P</a></span> and preprocessor feature flags for available peripherals.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+Available hardware flags</h1>
 <ul>
 <li><span class="tt"><a class="el" href="_config_8h.html#a2e6fae307af66ac41051a38f9d46c82f" title="Generic hardware feature flags for preprocessor checks.">MCU_HAS_GPIO</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#a5c3bf065299f541954b877e3064a0b84">MCU_HAS_ADC</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#ae695c2484aa54882242cad89f3a9c3a3">MCU_HAS_PWM</a></span></li>
-<li><span class="tt"><a class="el" href="_config_8h.html#af51659601453b1f59aca586dcfdb6c42">MCU_HAS_TIMER0</a></span>, <span class="tt"><a class="el" href="_config_8h.html#a747fea90643cb5d776c735cc43c1b27a">MCU_HAS_TIMER1</a></span>, <span class="tt"><a class="el" href="_config_8h.html#a254d63b2aa24ad3afe2fb35ff62cf0b8">MCU_HAS_TIMER2</a></span></li>
+<li><span class="tt"><a class="el" href="_config_8h.html#af51659601453b1f59aca586dcfdb6c42">MCU_HAS_TIMER0</a></span></li>
+<li><span class="tt"><a class="el" href="_config_8h.html#a747fea90643cb5d776c735cc43c1b27a">MCU_HAS_TIMER1</a></span></li>
+<li><span class="tt"><a class="el" href="_config_8h.html#a254d63b2aa24ad3afe2fb35ff62cf0b8">MCU_HAS_TIMER2</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#a5d8929b9f1999c000ca9c1f99c5b58dd">MCU_HAS_USART</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#a9c3de20e985ac9f0027f28d67ee70898">MCU_HAS_SPI</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#a0a389252221c90efded778f47dc45d20">MCU_HAS_TWI</a></span></li>
@@ -135,43 +133,31 @@ Defined by the ATmega328P definitions</h1>
 <li><span class="tt"><a class="el" href="_config_8h.html#acd390acb051592cceda6bdc413b3a24d">MCU_HAS_DEBUGWIRE</a></span></li>
 <li><span class="tt"><a class="el" href="_config_8h.html#a588d21ef0745310af76466a66309bde8">MCU_HAS_SELF_PROGRAMMABLE_FLASH</a></span></li>
 </ul>
-<p>These macros are useful in <span class="tt">#if</span> conditions. In C++ code, prefer the matching namespace constants.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
-Selected by MCUConfig.h</h1>
-<p>Define at most one package:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+Package selection</h1>
 <ul>
 <li><span class="tt">MCU_PACKAGE_PDIP28</span></li>
 <li><span class="tt">MCU_PACKAGE_MLF28</span></li>
 <li><span class="tt">MCU_PACKAGE_TQFP32</span></li>
 <li><span class="tt">MCU_PACKAGE_MLF32</span></li>
 </ul>
-<p>Define at most one operating grade:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+Operating grade</h1>
 <ul>
 <li><span class="tt">MCU_GRADE_INDUSTRIAL_85C</span></li>
 <li><span class="tt">MCU_GRADE_INDUSTRIAL_105C</span></li>
 <li><span class="tt">MCU_GRADE_AUTOMOTIVE_125C</span></li>
 </ul>
-<p>For MLF32, optionally define <span class="tt">MCU_MLF32_PUNCH</span> or <span class="tt">MCU_MLF32_SAWN</span>.</p>
-<p>Optional checks:</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+Configuration checks</h1>
 <ul>
-<li><span class="tt">MCU_REQUIRE_PACKAGE</span></li>
-<li><span class="tt">MCU_REQUIRE_GRADE</span></li>
-<li><span class="tt">MCU_REQUIRE_MLF32_STYLE</span></li>
+<li><span class="tt">MCU_REQUIRE_PACKAGE</span> — require explicit package selection.</li>
+<li><span class="tt">MCU_REQUIRE_GRADE</span> — require explicit grade selection.</li>
+<li><span class="tt">MCU_MLF32_PUNCH</span></li>
+<li><span class="tt">MCU_MLF32_SAWN</span></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
-Board configuration values</h1>
-<p>The example <span class="tt">MCUConfig.h</span> also uses:</p>
-<ul>
-<li><span class="tt">MCU_CLOCK_HZ</span></li>
-<li><span class="tt">MCU_FUSE_LOW</span></li>
-<li><span class="tt">MCU_FUSE_HIGH</span></li>
-<li><span class="tt">MCU_FUSE_EXT</span></li>
-</ul>
-<p>These values belong to the consuming board configuration. The definitions library does not calculate fuse bytes or use these macros internally.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
-C++ constants instead of macros</h1>
-<p>Use <span class="tt">mcu::gpio::port_count</span>, <span class="tt">mcu::memory::flash_size_bytes</span>, <span class="tt">mcu::pwm::channel_count</span>, and <span class="tt">mcu::register_bits::...</span> instead of creating another macro for each hardware value.</p>
-<p>There are no public per-register <span class="tt">ATMEGA328P_*</span> macros or long <span class="tt">*_MAP(X)</span> lists in the module headers. </p>
+<p><span class="tt">MCU_CLOCK_HZ</span> and optional fuse settings belong to the consuming firmware. They do not configure the device by themselves.</p>
+<p>For C++ code, prefer the typed namespace constants such as <span class="tt">mcu::gpio::port_count</span> and <span class="tt">mcu::device::has_gpio</span>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

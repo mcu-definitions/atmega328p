@@ -40,64 +40,64 @@ namespace atmega328p
         /** @brief Alternate pin function identifiers. */
         enum class Function : uint8_t
         {
-            GPIO,    ///< Digital input/output.
-            PCINT0,  ///< Pin-change interrupt source 0.
-            PCINT1,  ///< Pin-change interrupt source 1.
-            PCINT2,  ///< Pin-change interrupt source 2.
-            PCINT3,  ///< Pin-change interrupt source 3.
-            PCINT4,  ///< Pin-change interrupt source 4.
-            PCINT5,  ///< Pin-change interrupt source 5.
-            PCINT6,  ///< Pin-change interrupt source 6.
-            PCINT7,  ///< Pin-change interrupt source 7.
-            PCINT8,  ///< Pin-change interrupt source 8.
-            PCINT9,  ///< Pin-change interrupt source 9.
-            PCINT10, ///< Pin-change interrupt source 10.
-            PCINT11, ///< Pin-change interrupt source 11.
-            PCINT12, ///< Pin-change interrupt source 12.
-            PCINT13, ///< Pin-change interrupt source 13.
-            PCINT14, ///< Pin-change interrupt source 14.
-            PCINT16, ///< Pin-change interrupt source 16.
-            PCINT17, ///< Pin-change interrupt source 17.
-            PCINT18, ///< Pin-change interrupt source 18.
-            PCINT19, ///< Pin-change interrupt source 19.
-            PCINT20, ///< Pin-change interrupt source 20.
-            PCINT21, ///< Pin-change interrupt source 21.
-            PCINT22, ///< Pin-change interrupt source 22.
-            PCINT23, ///< Pin-change interrupt source 23.
-            CLKO,    ///< System clock output.
-            ICP1,    ///< Timer1 input capture.
-            OC1A,    ///< Timer output-compare OC1A.
-            SS,      ///< SPI slave select.
-            OC1B,    ///< Timer output-compare OC1B.
-            MOSI,    ///< SPI master-out/slave-in.
-            OC2A,    ///< Timer output-compare OC2A.
-            MISO,    ///< SPI master-in/slave-out.
-            SCK,     ///< SPI serial clock.
-            XTAL1,   ///< Main oscillator input.
-            TOSC1,   ///< Timer2 oscillator input.
-            XTAL2,   ///< Main oscillator output.
-            TOSC2,   ///< Timer2 oscillator output.
-            ADC0,    ///< ADC input 0.
-            ADC1,    ///< ADC input 1.
-            ADC2,    ///< ADC input 2.
-            ADC3,    ///< ADC input 3.
-            ADC4,    ///< ADC input 4.
-            ADC5,    ///< ADC input 5.
-            SDA,     ///< TWI serial data.
-            SCL,     ///< TWI serial clock.
-            RESET,   ///< External reset.
-            RXD,     ///< USART receive.
-            TXD,     ///< USART transmit.
-            INT0,    ///< External interrupt 0.
-            INT1,    ///< External interrupt 1.
-            OC2B,    ///< Timer output-compare OC2B.
-            XCK,     ///< USART external clock.
-            T0,      ///< Timer0 external clock.
-            OC0B,    ///< Timer output-compare OC0B.
-            T1,      ///< Timer1 external clock.
-            OC0A,    ///< Timer output-compare OC0A.
-            AIN0,    ///< Analog comparator positive input.
-            AIN1,    ///< Analog comparator negative input.
+            GPIO = 0,              ///< Digital input/output.
+            PCINT0 = GPIO + 1,     ///< Pin-change interrupt source 0.
+            PCINT1 = PCINT0 + 1,   ///< Pin-change interrupt source 1.
+            PCINT2 = PCINT1 + 1,   ///< Pin-change interrupt source 2.
+            PCINT3 = PCINT2 + 1,   ///< Pin-change interrupt source 3.
+            PCINT4 = PCINT3 + 1,   ///< Pin-change interrupt source 4.
+            PCINT5 = PCINT4 + 1,   ///< Pin-change interrupt source 5.
+            PCINT6 = PCINT5 + 1,   ///< Pin-change interrupt source 6.
+            PCINT7 = PCINT6 + 1,   ///< Pin-change interrupt source 7.
+            PCINT8 = PCINT7 + 1,   ///< Pin-change interrupt source 8.
+            PCINT9 = PCINT8 + 1,   ///< Pin-change interrupt source 9.
+            PCINT10 = PCINT9 + 1,  ///< Pin-change interrupt source 10.
+            PCINT11 = PCINT10 + 1, ///< Pin-change interrupt source 11.
+            PCINT12 = PCINT11 + 1, ///< Pin-change interrupt source 12.
+            PCINT13 = PCINT12 + 1, ///< Pin-change interrupt source 13.
+            PCINT14 = PCINT13 + 1, ///< Pin-change interrupt source 14.
+            PCINT16 = PCINT14 + 1, ///< Pin-change interrupt source 16.
+            PCINT17 = PCINT16 + 1, ///< Pin-change interrupt source 17.
+            PCINT18 = PCINT17 + 1, ///< Pin-change interrupt source 18.
+            PCINT19 = PCINT18 + 1, ///< Pin-change interrupt source 19.
+            PCINT20 = PCINT19 + 1, ///< Pin-change interrupt source 20.
+            PCINT21 = PCINT20 + 1, ///< Pin-change interrupt source 21.
+            PCINT22 = PCINT21 + 1, ///< Pin-change interrupt source 22.
+            PCINT23 = PCINT22 + 1, ///< Pin-change interrupt source 23.
+            CLKO = PCINT23 + 1,    ///< System clock output.
+            ICP1 = CLKO + 1,       ///< Timer1 input capture.
+            OC1A = ICP1 + 1,       ///< Timer output-compare OC1A.
+            SS = OC1A + 1,         ///< SPI slave select.
+            OC1B = SS + 1,         ///< Timer output-compare OC1B.
+            MOSI = OC1B + 1,       ///< SPI master-out/slave-in.
+            OC2A = MOSI + 1,       ///< Timer output-compare OC2A.
+            MISO = OC2A + 1,       ///< SPI master-in/slave-out.
+            SCK = MISO + 1,        ///< SPI serial clock.
+            XTAL1 = SCK + 1,       ///< Main oscillator input.
+            TOSC1 = XTAL1 + 1,     ///< Timer2 oscillator input.
+            XTAL2 = TOSC1 + 1,     ///< Main oscillator output.
+            TOSC2 = XTAL2 + 1,     ///< Timer2 oscillator output.
+            ADC0 = TOSC2 + 1,      ///< ADC input 0.
+            ADC1 = ADC0 + 1,       ///< ADC input 1.
+            ADC2 = ADC1 + 1,       ///< ADC input 2.
+            ADC3 = ADC2 + 1,       ///< ADC input 3.
+            ADC4 = ADC3 + 1,       ///< ADC input 4.
+            ADC5 = ADC4 + 1,       ///< ADC input 5.
+            SDA = ADC5 + 1,        ///< TWI serial data.
+            SCL = SDA + 1,         ///< TWI serial clock.
+            RESET = SCL + 1,       ///< External reset.
+            RXD = RESET + 1,       ///< USART receive.
+            TXD = RXD + 1,         ///< USART transmit.
+            INT0 = TXD + 1,        ///< External interrupt 0.
+            INT1 = INT0 + 1,       ///< External interrupt 1.
+            OC2B = INT1 + 1,       ///< Timer output-compare OC2B.
+            XCK = OC2B + 1,        ///< USART external clock.
+            T0 = XCK + 1,          ///< Timer0 external clock.
+            OC0B = T0 + 1,         ///< Timer output-compare OC0B.
+            T1 = OC0B + 1,         ///< Timer1 external clock.
+            OC0A = T1 + 1,         ///< Timer output-compare OC0A.
+            AIN0 = OC0A + 1,       ///< Analog comparator positive input.
+            AIN1 = AIN0 + 1,       ///< Analog comparator negative input.
         };
 
         /** @brief Capability masks for individual logical pins. */

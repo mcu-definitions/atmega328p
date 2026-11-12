@@ -130,37 +130,37 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ac77be25cb113cd1128ae15e0174b0403" id="r_ac77be25cb113cd1128ae15e0174b0403"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403">atmega328p::interrupts::Source</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a2b3c5d77db4115b8db43eda758aeae3c">atmega328p::interrupts::INT0</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403ad2c65418e75b1329409d536300aa7dda">atmega328p::interrupts::INT1</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aecb2c33ed5bf0c147b4094cce868cadc">atmega328p::interrupts::PCINT0</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a120c90c7e7d5ae4a84391d0adaca8320">atmega328p::interrupts::PCINT1</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a2b3c5d77db4115b8db43eda758aeae3c">atmega328p::interrupts::INT0</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403ad2c65418e75b1329409d536300aa7dda">atmega328p::interrupts::INT1</a> = INT0 + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aecb2c33ed5bf0c147b4094cce868cadc">atmega328p::interrupts::PCINT0</a> = INT1 + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a120c90c7e7d5ae4a84391d0adaca8320">atmega328p::interrupts::PCINT1</a> = PCINT0 + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8bacd1cf61a578d44a1d2fbd9b1aa1aa">atmega328p::interrupts::PCINT2</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a55eb0f30fd8fa5bbb22114afaefb0d0d">atmega328p::interrupts::Watchdog</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403abb6e1dd0c388e6f492ddc969b9782644">atmega328p::interrupts::Timer2CompareA</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a6b3b1c5f7863b182a3addaf92e834e18">atmega328p::interrupts::Timer2CompareB</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8bacd1cf61a578d44a1d2fbd9b1aa1aa">atmega328p::interrupts::PCINT2</a> = PCINT1 + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a55eb0f30fd8fa5bbb22114afaefb0d0d">atmega328p::interrupts::Watchdog</a> = PCINT2 + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403abb6e1dd0c388e6f492ddc969b9782644">atmega328p::interrupts::Timer2CompareA</a> = Watchdog + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a6b3b1c5f7863b182a3addaf92e834e18">atmega328p::interrupts::Timer2CompareB</a> = Timer2CompareA + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a9aff2c7d4263b3247518bd58fb720163">atmega328p::interrupts::Timer2Overflow</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a36cb599a7eacffb4f223e36b82366c86">atmega328p::interrupts::Timer1Capture</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a9b3206b5a75fada2b1d70cc23a646821">atmega328p::interrupts::Timer1CompareA</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aac35659bd24417733bc754ae54a86ff3">atmega328p::interrupts::Timer1CompareB</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a9aff2c7d4263b3247518bd58fb720163">atmega328p::interrupts::Timer2Overflow</a> = Timer2CompareB + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a36cb599a7eacffb4f223e36b82366c86">atmega328p::interrupts::Timer1Capture</a> = Timer2Overflow + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a9b3206b5a75fada2b1d70cc23a646821">atmega328p::interrupts::Timer1CompareA</a> = Timer1Capture + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aac35659bd24417733bc754ae54a86ff3">atmega328p::interrupts::Timer1CompareB</a> = Timer1CompareA + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8889c33622b1dca08dfd7ddf4f42ff3b">atmega328p::interrupts::Timer1Overflow</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403ad163360f6fc334f57bc74870183fede7">atmega328p::interrupts::Timer0CompareA</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a24ce7986209ed89647cf1d65835cd1eb">atmega328p::interrupts::Timer0CompareB</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8326d7dc32de97c9ee1025eb3c7dea6a">atmega328p::interrupts::Timer0Overflow</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8889c33622b1dca08dfd7ddf4f42ff3b">atmega328p::interrupts::Timer1Overflow</a> = Timer1CompareB + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403ad163360f6fc334f57bc74870183fede7">atmega328p::interrupts::Timer0CompareA</a> = Timer1Overflow + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a24ce7986209ed89647cf1d65835cd1eb">atmega328p::interrupts::Timer0CompareB</a> = Timer0CompareA + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a8326d7dc32de97c9ee1025eb3c7dea6a">atmega328p::interrupts::Timer0Overflow</a> = Timer0CompareB + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403af365f6370cc4787fbb8dce2575631557">atmega328p::interrupts::SPITransferComplete</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a682d7682ce7f1c2b2359613d1745883a">atmega328p::interrupts::USARTReceiveComplete</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a6091ab675142ef5937b224ce25379d9d">atmega328p::interrupts::USARTDataRegisterEmpty</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a0e895bec41e748f18d10d5558c3132c8">atmega328p::interrupts::USARTTransmitComplete</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403af365f6370cc4787fbb8dce2575631557">atmega328p::interrupts::SPITransferComplete</a> = Timer0Overflow + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a682d7682ce7f1c2b2359613d1745883a">atmega328p::interrupts::USARTReceiveComplete</a> = SPITransferComplete + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a6091ab675142ef5937b224ce25379d9d">atmega328p::interrupts::USARTDataRegisterEmpty</a> = USARTReceiveComplete + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a0e895bec41e748f18d10d5558c3132c8">atmega328p::interrupts::USARTTransmitComplete</a> = USARTDataRegisterEmpty + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a0f5bf8347971e54544ae668136d881c8">atmega328p::interrupts::ADCConversionComplete</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aabd95f5aafb9e4eefc73376680d46c91">atmega328p::interrupts::EEPROMReady</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a61ad2de68ee8e16b03b13e41779b129d">atmega328p::interrupts::AnalogComparator</a>
-, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403afe3f59b29b6cf2a79f6130e80a09da26">atmega328p::interrupts::TWI</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a0f5bf8347971e54544ae668136d881c8">atmega328p::interrupts::ADCConversionComplete</a> = USARTTransmitComplete + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403aabd95f5aafb9e4eefc73376680d46c91">atmega328p::interrupts::EEPROMReady</a> = ADCConversionComplete + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a61ad2de68ee8e16b03b13e41779b129d">atmega328p::interrupts::AnalogComparator</a> = EEPROMReady + 1
+, <a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403afe3f59b29b6cf2a79f6130e80a09da26">atmega328p::interrupts::TWI</a> = AnalogComparator + 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a80f65dc1b4307fc8b79e986ec187be7e">atmega328p::interrupts::SPMReady</a>
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403a80f65dc1b4307fc8b79e986ec187be7e">atmega328p::interrupts::SPMReady</a> = TWI + 1
 <br />
  }</td></tr>
 <tr class="memdesc:ac77be25cb113cd1128ae15e0174b0403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt sources supported by the device.  <a href="namespaceatmega328p_1_1interrupts.html#ac77be25cb113cd1128ae15e0174b0403">More...</a><br /></td></tr>

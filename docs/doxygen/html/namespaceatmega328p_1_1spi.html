@@ -124,12 +124,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ac61e2705fee0933a392024d0e04dd23eab68fa4884da8d22e83f37b4f209295f1">Mode3</a> = 3
  }</td></tr>
 <tr class="memdesc:ac61e2705fee0933a392024d0e04dd23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peripheral operating modes.  <a href="#ac61e2705fee0933a392024d0e04dd23e">More...</a><br /></td></tr>
-<tr class="memitem:a0b562418afb8b099a4c6daddef6c2251" id="r_a0b562418afb8b099a4c6daddef6c2251"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a0b562418afb8b099a4c6daddef6c2251">BitOrder</a> : uint8_t { <a class="el" href="#a0b562418afb8b099a4c6daddef6c2251a3236fa1fd3d5aa5214a15ac418e9d70d">MostSignificantFirst</a>
-, <a class="el" href="#a0b562418afb8b099a4c6daddef6c2251aafbfd6eb1393dadb67e28f5d75882e65">LeastSignificantFirst</a>
+<tr class="memitem:a0b562418afb8b099a4c6daddef6c2251" id="r_a0b562418afb8b099a4c6daddef6c2251"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a0b562418afb8b099a4c6daddef6c2251">BitOrder</a> : uint8_t { <a class="el" href="#a0b562418afb8b099a4c6daddef6c2251a3236fa1fd3d5aa5214a15ac418e9d70d">MostSignificantFirst</a> = 0
+, <a class="el" href="#a0b562418afb8b099a4c6daddef6c2251aafbfd6eb1393dadb67e28f5d75882e65">LeastSignificantFirst</a> = MostSignificantFirst + 1
  }</td></tr>
 <tr class="memdesc:a0b562418afb8b099a4c6daddef6c2251"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI bit-transfer order.  <a href="#a0b562418afb8b099a4c6daddef6c2251">More...</a><br /></td></tr>
-<tr class="memitem:a6893ee57307571e5f29f199522da6fab" id="r_a6893ee57307571e5f29f199522da6fab"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6893ee57307571e5f29f199522da6fab">Role</a> : uint8_t { <a class="el" href="#a6893ee57307571e5f29f199522da6fabaf03bde11d261f185cbacfa32c1c6538c">Master</a>
-, <a class="el" href="#a6893ee57307571e5f29f199522da6fabafe25c0ad752c03ce2361025c235b63e1">Slave</a>
+<tr class="memitem:a6893ee57307571e5f29f199522da6fab" id="r_a6893ee57307571e5f29f199522da6fab"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6893ee57307571e5f29f199522da6fab">Role</a> : uint8_t { <a class="el" href="#a6893ee57307571e5f29f199522da6fabaf03bde11d261f185cbacfa32c1c6538c">Master</a> = 0
+, <a class="el" href="#a6893ee57307571e5f29f199522da6fabafe25c0ad752c03ce2361025c235b63e1">Slave</a> = Master + 1
  }</td></tr>
 <tr class="memdesc:a6893ee57307571e5f29f199522da6fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI controller roles.  <a href="#a6893ee57307571e5f29f199522da6fab">More...</a><br /></td></tr>
 <tr class="memitem:a787666e72ae8d2e3a29f2e66669c0832" id="r_a787666e72ae8d2e3a29f2e66669c0832"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a787666e72ae8d2e3a29f2e66669c0832">ClockDivider</a> : uint16_t { <br />

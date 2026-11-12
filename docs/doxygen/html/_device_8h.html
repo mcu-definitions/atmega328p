@@ -113,9 +113,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_device_8h.htm
 </div><!--header-->
 <div class="contents">
 
-<p>Device identity and peripheral counts.  
+<p>Hardware resources, capabilities and device signature.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="_config_8h_source.html">Config.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_config_8h_source.html">Config.h</a>&quot;</code><br />
 </div>
 <p><a href="_device_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,59 +125,69 @@ Namespaces</h2></td></tr>
 <tr class="memitem:atmega328p" id="r_atmega328p"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p.html">atmega328p</a></td></tr>
 <tr class="memdesc:namespaceatmega328p"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device-specific definitions for the ATmega328P. <br /></td></tr>
 <tr class="memitem:atmega328p_3A_3Adevice" id="r_atmega328p_3A_3Adevice"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1device.html">atmega328p::device</a></td></tr>
-<tr class="memdesc:namespaceatmega328p_1_1device"><td class="mdescLeft">&#160;</td><td class="mdescRight">General ATmega328P device information. <br /></td></tr>
+<tr class="memdesc:namespaceatmega328p_1_1device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device information. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5c09dd7adb6a2befeae88fb9b7888527" id="r_a5c09dd7adb6a2befeae88fb9b7888527"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527">enum </a>&#160;</td><td class="memItemRight">: unsigned char { <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527aca676d05885f7472d165ba80ee950d33">atmega328p::device::programmable_io_line_count</a> = 23
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a35d22b24cf07f3490278748e2fab04b2">atmega328p::device::gpio_line_count_with_pc6_as_reset</a> = 22
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527ab11e80e4a921a5c69e9ef897a86a3fc3">atmega328p::device::gpio_line_count_with_pc6_as_gpio</a> = 23
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a50dfa0b4fa281c35d414576c74410ab7">atmega328p::device::timer_count</a> = 3
+<tr class="memitem:a03d8bee9abfa301de4d2daffb9c28c4f" id="r_a03d8bee9abfa301de4d2daffb9c28c4f"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4f">enum </a>&#160;</td><td class="memItemRight">: uint8_t { <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4faca676d05885f7472d165ba80ee950d33">atmega328p::device::programmable_io_line_count</a> = 23
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa75291bda3ee75a33f0d58a50fe35b781">atmega328p::device::gpio_line_count</a> = 23
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4faef09ed435406197d9735625e53c1534b">atmega328p::device::gpio_line_count_default</a> = 22
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa35d22b24cf07f3490278748e2fab04b2">atmega328p::device::gpio_line_count_with_pc6_as_reset</a> = 22
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a8c730ed627d75aeaf95f8489ef5f3f08">atmega328p::device::pwm_channel_count</a> = 6
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527aba0a9798a6ce3c755343b35be2ae9609">atmega328p::device::adc_max_external_channel_count</a> = 8
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a5625f213fd55d66dcb0d2111a2930405">atmega328p::device::adc_resolution_bits</a> = 10
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a99df763353ee1d524cfb309bed83649c">atmega328p::device::usart_count</a> = 1
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fab11e80e4a921a5c69e9ef897a86a3fc3">atmega328p::device::gpio_line_count_with_pc6_as_gpio</a> = 23
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa50dfa0b4fa281c35d414576c74410ab7">atmega328p::device::timer_count</a> = 3
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa8c730ed627d75aeaf95f8489ef5f3f08">atmega328p::device::pwm_channel_count</a> = 6
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4faba0a9798a6ce3c755343b35be2ae9609">atmega328p::device::adc_max_external_channel_count</a> = 8
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a41f32f4a6caa86a71b730e40f95a7da3">atmega328p::device::spi_count</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a969ce613cd99d3f77343009409017d8f">atmega328p::device::spi_capable_peripheral_count</a> = 2
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527af43d69789eedbd17679471ae98d4d274">atmega328p::device::twi_count</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a884bcfe50056790c01bc51c4840c04d1">atmega328p::device::external_interrupt_count</a> = 2
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa5625f213fd55d66dcb0d2111a2930405">atmega328p::device::adc_resolution_bits</a> = 10
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa99df763353ee1d524cfb309bed83649c">atmega328p::device::usart_count</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa41f32f4a6caa86a71b730e40f95a7da3">atmega328p::device::spi_count</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa969ce613cd99d3f77343009409017d8f">atmega328p::device::spi_capable_peripheral_count</a> = 2
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527a1302cc179ed2531f2c940652824a6dd8">atmega328p::device::interrupt_vector_count</a> = 26
-, <a class="el" href="namespaceatmega328p_1_1device.html#a5c09dd7adb6a2befeae88fb9b7888527ac8899b9436b1dfa6fd85e68e284cc7a4">atmega328p::device::pin_change_source_count</a> = 23
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4faf43d69789eedbd17679471ae98d4d274">atmega328p::device::twi_count</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa884bcfe50056790c01bc51c4840c04d1">atmega328p::device::external_interrupt_count</a> = 2
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fa1302cc179ed2531f2c940652824a6dd8">atmega328p::device::interrupt_vector_count</a> = 26
+, <a class="el" href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4fac8899b9436b1dfa6fd85e68e284cc7a4">atmega328p::device::pin_change_source_count</a> = 23
 <br />
  }</td></tr>
-<tr class="memitem:af06a13c5e3e6182973811cf664a7f9ae" id="r_af06a13c5e3e6182973811cf664a7f9ae"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9ae">enum </a>&#160;</td><td class="memItemRight">: unsigned char { <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea6bdc37061b4cf722bf03decf39d0c54a">atmega328p::device::has_gpio</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea64a22aeeca624bca8a17e577f9566529">atmega328p::device::has_adc</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea5d82f2db804ef962f981ee51273788d0">atmega328p::device::has_pwm</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea0851b53a6feb7910f6dcd4a80c951b31">atmega328p::device::has_timer0</a> = 1
+<tr class="memdesc:a03d8bee9abfa301de4d2daffb9c28c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware resource counts.  <a href="namespaceatmega328p_1_1device.html#a03d8bee9abfa301de4d2daffb9c28c4f">More...</a><br /></td></tr>
+<tr class="memitem:a7015c8f111220e7e7e73342bae267a05" id="r_a7015c8f111220e7e7e73342bae267a05"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05">enum </a>&#160;</td><td class="memItemRight">: uint8_t { <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a6bdc37061b4cf722bf03decf39d0c54a">atmega328p::device::has_gpio</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a64a22aeeca624bca8a17e577f9566529">atmega328p::device::has_adc</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a5d82f2db804ef962f981ee51273788d0">atmega328p::device::has_pwm</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a0851b53a6feb7910f6dcd4a80c951b31">atmega328p::device::has_timer0</a> = 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aeada05132bc7a7676a57f85ec3b7ed5551">atmega328p::device::has_timer1</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea721426cf300a66765e51d2739b1530c3">atmega328p::device::has_timer2</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea264f6faedfa66166e275cc78f9c00b7c">atmega328p::device::has_usart</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea444320ec7da926d2bdd51a02652cdf13">atmega328p::device::has_spi</a> = 1
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05ada05132bc7a7676a57f85ec3b7ed5551">atmega328p::device::has_timer1</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a721426cf300a66765e51d2739b1530c3">atmega328p::device::has_timer2</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a0d5b7988a1a2366420ad0d985f830287">atmega328p::device::has_timer3</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05af5934a44be03bad97ddecfca8b967273">atmega328p::device::has_timer4</a> = 0
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea9bab4206373f2fcb3d3e5bab8edea5ec">atmega328p::device::has_twi</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea93bd156a5bf565cfd87d669abe671c83">atmega328p::device::has_analog_comparator</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea63d2934e87a42cfc5bd6cadf37bad87b">atmega328p::device::has_watchdog</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea2b96738645ebd14d93647fc8d99ed2b7">atmega328p::device::has_external_interrupts</a> = 1
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a1225132868075067cb7b64fe306063a1">atmega328p::device::has_timer5</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a264f6faedfa66166e275cc78f9c00b7c">atmega328p::device::has_usart</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a444320ec7da926d2bdd51a02652cdf13">atmega328p::device::has_spi</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a9bab4206373f2fcb3d3e5bab8edea5ec">atmega328p::device::has_twi</a> = 1
 , <br />
-&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea57971ebc8f93a6b6cea927a4e9b6bf3c">atmega328p::device::has_pin_change_interrupts</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea466891a31d32b540e06c34f3bc8f38a0">atmega328p::device::has_debugwire</a> = 1
-, <a class="el" href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9aea184837bbbd841322d24077195e9bfbe0">atmega328p::device::has_self_programmable_flash</a> = 1
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a93bd156a5bf565cfd87d669abe671c83">atmega328p::device::has_analog_comparator</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a63d2934e87a42cfc5bd6cadf37bad87b">atmega328p::device::has_watchdog</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a2b96738645ebd14d93647fc8d99ed2b7">atmega328p::device::has_external_interrupts</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a57971ebc8f93a6b6cea927a4e9b6bf3c">atmega328p::device::has_pin_change_interrupts</a> = 1
+, <br />
+&#160;&#160;<a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a466891a31d32b540e06c34f3bc8f38a0">atmega328p::device::has_debugwire</a> = 1
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a70fb24f4d86acc1bb5aab4768e69e71c">atmega328p::device::has_jtag</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05ac706f8f0ad2bb7efeefad76619a80f92">atmega328p::device::has_external_memory_interface</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05a184837bbbd841322d24077195e9bfbe0">atmega328p::device::has_self_programmable_flash</a> = 1
 <br />
  }</td></tr>
-<tr class="memdesc:af06a13c5e3e6182973811cf664a7f9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peripheral presence flags.  <a href="namespaceatmega328p_1_1device.html#af06a13c5e3e6182973811cf664a7f9ae">More...</a><br /></td></tr>
-<tr class="memitem:a2823ada877c7d60d0cc7f52359eccc8b" id="r_a2823ada877c7d60d0cc7f52359eccc8b"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#a2823ada877c7d60d0cc7f52359eccc8b">enum </a>&#160;</td><td class="memItemRight">: unsigned char { <a class="el" href="namespaceatmega328p_1_1device.html#a2823ada877c7d60d0cc7f52359eccc8ba492624f26b00f37be36e68489862f1f7">atmega328p::device::signature_byte_0</a> = 0x1E
-, <a class="el" href="namespaceatmega328p_1_1device.html#a2823ada877c7d60d0cc7f52359eccc8ba4d2dec4421fb54c05e5d1eec6d00eaf6">atmega328p::device::signature_byte_1</a> = 0x95
-, <a class="el" href="namespaceatmega328p_1_1device.html#a2823ada877c7d60d0cc7f52359eccc8ba3f9c6f339c5530dcac1d57ff69886cbe">atmega328p::device::signature_byte_2</a> = 0x0F
+<tr class="memdesc:a7015c8f111220e7e7e73342bae267a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peripheral availability flags.  <a href="namespaceatmega328p_1_1device.html#a7015c8f111220e7e7e73342bae267a05">More...</a><br /></td></tr>
+<tr class="memitem:afebd7c897a1baf8bfe8646a8ffebe1fb" id="r_afebd7c897a1baf8bfe8646a8ffebe1fb"><td class="memItemLeft"><a class="el" href="namespaceatmega328p_1_1device.html#afebd7c897a1baf8bfe8646a8ffebe1fb">enum </a>&#160;</td><td class="memItemRight">: uint16_t { <a class="el" href="namespaceatmega328p_1_1device.html#afebd7c897a1baf8bfe8646a8ffebe1fba492624f26b00f37be36e68489862f1f7">atmega328p::device::signature_byte_0</a> = 0x1E
+, <a class="el" href="namespaceatmega328p_1_1device.html#afebd7c897a1baf8bfe8646a8ffebe1fba4d2dec4421fb54c05e5d1eec6d00eaf6">atmega328p::device::signature_byte_1</a> = 0x95
+, <a class="el" href="namespaceatmega328p_1_1device.html#afebd7c897a1baf8bfe8646a8ffebe1fba3f9c6f339c5530dcac1d57ff69886cbe">atmega328p::device::signature_byte_2</a> = 0x0F
  }</td></tr>
+<tr class="memdesc:afebd7c897a1baf8bfe8646a8ffebe1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device signature and identification.  <a href="namespaceatmega328p_1_1device.html#afebd7c897a1baf8bfe8646a8ffebe1fb">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Device identity and peripheral counts. </p>
+<div class="textblock"><p>Hardware resources, capabilities and device signature. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

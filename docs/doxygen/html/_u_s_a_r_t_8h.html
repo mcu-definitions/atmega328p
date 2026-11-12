@@ -130,9 +130,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:afdf4cf738c343001dd9b7798a734736e" id="r_afdf4cf738c343001dd9b7798a734736e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736e">atmega328p::usart::Mode</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea288aae25bc408055f50c21c991903a44">atmega328p::usart::Asynchronous</a>
-, <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea2fe4167817733fec8e6ba1afddf78f1b">atmega328p::usart::Synchronous</a>
-, <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea35968d5241ec828f1d5e1f7bcb066faa">atmega328p::usart::MasterSPI</a>
+<tr class="memitem:afdf4cf738c343001dd9b7798a734736e" id="r_afdf4cf738c343001dd9b7798a734736e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736e">atmega328p::usart::Mode</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea288aae25bc408055f50c21c991903a44">atmega328p::usart::Asynchronous</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea2fe4167817733fec8e6ba1afddf78f1b">atmega328p::usart::Synchronous</a> = Asynchronous + 1
+, <a class="el" href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736ea35968d5241ec828f1d5e1f7bcb066faa">atmega328p::usart::MasterSPI</a> = Synchronous + 1
  }</td></tr>
 <tr class="memdesc:afdf4cf738c343001dd9b7798a734736e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peripheral operating modes.  <a href="namespaceatmega328p_1_1usart.html#afdf4cf738c343001dd9b7798a734736e">More...</a><br /></td></tr>
 <tr class="memitem:a40b20a3f290be513c6e908d00b61575e" id="r_a40b20a3f290be513c6e908d00b61575e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#a40b20a3f290be513c6e908d00b61575e">atmega328p::usart::DataBits</a> : uint8_t { <br />
@@ -145,9 +145,9 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a40b20a3f290be513c6e908d00b61575e"><td class="mdescLeft">&#160;</td><td class="mdescRight">USART frame data-bit counts.  <a href="namespaceatmega328p_1_1usart.html#a40b20a3f290be513c6e908d00b61575e">More...</a><br /></td></tr>
-<tr class="memitem:aa2019cc228ccc16a4879da7b4ce3b715" id="r_aa2019cc228ccc16a4879da7b4ce3b715"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715">atmega328p::usart::Parity</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715ab9f5c797ebbf55adccdd8539a65a0241">atmega328p::usart::Disabled</a>
-, <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715a35537fbc25d87ffe59e4f35fefcd34b7">atmega328p::usart::Even</a>
-, <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715a37b6bd7fe61d651735cec3d3b0356c66">atmega328p::usart::Odd</a>
+<tr class="memitem:aa2019cc228ccc16a4879da7b4ce3b715" id="r_aa2019cc228ccc16a4879da7b4ce3b715"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715">atmega328p::usart::Parity</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715ab9f5c797ebbf55adccdd8539a65a0241">atmega328p::usart::Disabled</a> = 0
+, <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715a35537fbc25d87ffe59e4f35fefcd34b7">atmega328p::usart::Even</a> = Disabled + 1
+, <a class="el" href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715a37b6bd7fe61d651735cec3d3b0356c66">atmega328p::usart::Odd</a> = Even + 1
  }</td></tr>
 <tr class="memdesc:aa2019cc228ccc16a4879da7b4ce3b715"><td class="mdescLeft">&#160;</td><td class="mdescRight">USART parity modes.  <a href="namespaceatmega328p_1_1usart.html#aa2019cc228ccc16a4879da7b4ce3b715">More...</a><br /></td></tr>
 <tr class="memitem:a328d87ee9faa22b65541a30c9178db9d" id="r_a328d87ee9faa22b65541a30c9178db9d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1usart.html#a328d87ee9faa22b65541a30c9178db9d">atmega328p::usart::StopBits</a> : uint8_t { <a class="el" href="namespaceatmega328p_1_1usart.html#a328d87ee9faa22b65541a30c9178db9da06c2cea18679d64399783748fa367bdd">atmega328p::usart::One</a> = 1

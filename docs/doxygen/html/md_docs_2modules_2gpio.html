@@ -112,21 +112,20 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2modul
   <div class="headertitle"><div class="title">GPIO.h </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md47"></a></p>
-<p><b>Purpose:</b> GPIO port widths, masks, pull-ups, and pin limitations.</p>
-<p>Namespace: <span class="tt"><a class="el" href="namespaceatmega328p_1_1gpio.html" title="GPIO characteristics of the ATmega328P.">atmega328p::gpio</a></span></p>
-<p>The device has ports B, C, and D. Port C exposes seven logical pins; ports B and D expose eight each.</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md42"></a></p>
+<p><b>Purpose:</b> GPIO port widths, valid bit masks, register addresses and hardware capabilities.</p>
+<p>Namespace: <span class="tt"><a class="el" href="namespaceatmega328p_1_1gpio.html" title="GPIO characteristics.">atmega328p::gpio</a></span></p>
+<p>The device exposes 3 GPIO ports (B, C, D).</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_g_p_i_o_8h.html">atmega328p/GPIO.h</a>&gt;</span></div>
-<div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::port_count == 3, <span class="stringliteral">&quot;Three GPIO ports&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::port::b_width == 8, <span class="stringliteral">&quot;Port B width&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::port::c_width == 7, <span class="stringliteral">&quot;Port C width&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::has_internal_pullups == 1, <span class="stringliteral">&quot;Internal pull-ups&quot;</span>);</div>
-<div class="ttc" id="a_g_p_i_o_8h_html"><div class="ttname"><a href="_g_p_i_o_8h.html">GPIO.h</a></div><div class="ttdoc">GPIO port characteristics and hardware limitations.</div></div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> ports = mcu::gpio::port_count;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> width = mcu::gpio::port::b_width;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> mask = mcu::gpio::port::b_mask;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> direction = mcu::gpio::port::b_direction_register;</div>
+<div class="ttc" id="a_g_p_i_o_8h_html"><div class="ttname"><a href="_g_p_i_o_8h.html">GPIO.h</a></div><div class="ttdoc">GPIO port characteristics and register addresses.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><p>This is hardware metadata only. A GPIO library is responsible for configuring DDRx, PORTx, and PINx. </p>
+</div><!-- fragment --><p>Register metadata uses AVR data-space addresses. This header does not configure GPIO or access registers. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

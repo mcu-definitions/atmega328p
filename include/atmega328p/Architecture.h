@@ -6,6 +6,7 @@
 #ifndef ATMEGA328P_DEFINITIONS_ARCHITECTURE_H
 #define ATMEGA328P_DEFINITIONS_ARCHITECTURE_H
 
+#include <stdint.h>
 #include "Config.h"
 
 /** @brief Device-specific definitions for the ATmega328P. */
@@ -14,7 +15,7 @@ namespace atmega328p
     /** @brief AVR8 architecture characteristics. */
     namespace architecture
     {
-        enum : unsigned char
+        enum : uint8_t
         {
             cpu_word_bits = 8U,
             data_bus_bits = 8U,

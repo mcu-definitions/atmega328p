@@ -19,8 +19,8 @@ namespace atmega328p
         /** @brief Supported programming interfaces. */
         enum class Interface : uint8_t
         {
-            ISP,               ///< In-system serial programming.
-            HighVoltageSerial, ///< High-voltage serial programming.
+            ISP = 0,                     ///< In-system serial programming.
+            HighVoltageSerial = ISP + 1, ///< High-voltage serial programming.
         };
 
         enum : uint8_t

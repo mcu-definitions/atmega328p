@@ -25,11 +25,7 @@
 var NAVTREE =
 [
   [ "ATmega328p", "index.html", [
-    [ "Start here", "index.html#autotoc_md22", null ],
-    [ "MCU configuration", "index.html#autotoc_md23", null ],
-    [ "Module reference", "index.html#autotoc_md24", null ],
-    [ "Doxygen", "index.html#autotoc_md25", null ],
-    [ "Reference", "index.html#autotoc_md26", null ],
+    [ "ATmega328P reference", "index.html", "index" ],
     [ "Clock configuration", "md_docs_2configuration_2clock.html", [
       [ "Expected CPU frequency", "md_docs_2configuration_2clock.html#autotoc_md1", null ],
       [ "Available definitions", "md_docs_2configuration_2clock.html#autotoc_md2", null ]
@@ -39,28 +35,23 @@ var NAVTREE =
       [ "Fuse definitions", "md_docs_2configuration_2fuses.html#autotoc_md5", null ],
       [ "Keep values explicit", "md_docs_2configuration_2fuses.html#autotoc_md6", null ]
     ] ],
-    [ "MCUConfig.h", "md_docs_2configuration_2mcu-config.html", [
-      [ "Example", "md_docs_2configuration_2mcu-config.html#autotoc_md8", null ],
-      [ "What each value means", "md_docs_2configuration_2mcu-config.html#autotoc_md9", null ],
-      [ "Why the alias matters", "md_docs_2configuration_2mcu-config.html#autotoc_md10", null ]
-    ] ],
+    [ "MCUConfig.h", "md_docs_2configuration_2mcu-config.html", null ],
     [ "Definitions model", "md_docs_2definitions.html", [
-      [ "Primary interface", "md_docs_2definitions.html#autotoc_md12", null ],
-      [ "Macros", "md_docs_2definitions.html#autotoc_md13", null ],
-      [ "Package-dependent data", "md_docs_2definitions.html#autotoc_md14", null ],
-      [ "No runtime implementation", "md_docs_2definitions.html#autotoc_md15", null ]
+      [ "Interface", "md_docs_2definitions.html#autotoc_md9", null ],
+      [ "Register addresses", "md_docs_2definitions.html#autotoc_md10", null ],
+      [ "Logical pins and packages", "md_docs_2definitions.html#autotoc_md11", null ],
+      [ "Scope", "md_docs_2definitions.html#autotoc_md12", null ]
     ] ],
     [ "Getting started", "md_docs_2getting-started.html", [
-      [ "Include the definitions", "md_docs_2getting-started.html#autotoc_md17", null ],
-      [ "Create MCUConfig.h", "md_docs_2getting-started.html#autotoc_md18", null ],
-      [ "Use the common MCU alias", "md_docs_2getting-started.html#autotoc_md19", null ],
-      [ "Compile-time checks", "md_docs_2getting-started.html#autotoc_md20", null ]
+      [ "Include", "md_docs_2getting-started.html#autotoc_md14", null ],
+      [ "Read hardware metadata", "md_docs_2getting-started.html#autotoc_md15", null ],
+      [ "Configuration", "md_docs_2getting-started.html#autotoc_md16", null ]
     ] ],
     [ "Macros", "md_docs_2macros.html", [
-      [ "Defined by the ATmega328P definitions", "md_docs_2macros.html#autotoc_md28", null ],
-      [ "Selected by MCUConfig.h", "md_docs_2macros.html#autotoc_md29", null ],
-      [ "Board configuration values", "md_docs_2macros.html#autotoc_md30", null ],
-      [ "C++ constants instead of macros", "md_docs_2macros.html#autotoc_md31", null ]
+      [ "Available hardware flags", "md_docs_2macros.html#autotoc_md23", null ],
+      [ "Package selection", "md_docs_2macros.html#autotoc_md24", null ],
+      [ "Operating grade", "md_docs_2macros.html#autotoc_md25", null ],
+      [ "Configuration checks", "md_docs_2macros.html#autotoc_md26", null ]
     ] ],
     [ "ADC.h", "md_docs_2modules_2adc.html", null ],
     [ "ATmega328P.h", "md_docs_2modules_2aggregate-header.html", null ],
@@ -98,15 +89,14 @@ var NAVTREE =
     [ "TWI.h", "md_docs_2modules_2twi.html", null ],
     [ "USART.h", "md_docs_2modules_2usart.html", null ],
     [ "Watchdog.h", "md_docs_2modules_2watchdog.html", null ],
-    [ "Namespace map", "md_docs_2namespaces.html", [
-      [ "Nested namespaces", "md_docs_2namespaces.html#autotoc_md69", null ],
-      [ "Common interface across MCU repositories", "md_docs_2namespaces.html#autotoc_md70", null ]
+    [ "Namespaces", "md_docs_2namespaces.html", [
+      [ "Nested namespaces", "md_docs_2namespaces.html#autotoc_md64", null ]
     ] ],
-    [ "No runtime implementation", "md_docs_2no-runtime-code.html", null ],
+    [ "No runtime behavior", "md_docs_2no-runtime-code.html", null ],
     [ "Technical references", "md_docs_2references.html", [
-      [ "Primary datasheets", "md_docs_2references.html#autotoc_md73", null ],
-      [ "Errata", "md_docs_2references.html#autotoc_md74", null ],
-      [ "Source handling", "md_docs_2references.html#autotoc_md75", null ]
+      [ "Primary datasheets", "md_docs_2references.html#autotoc_md67", null ],
+      [ "Errata", "md_docs_2references.html#autotoc_md68", null ],
+      [ "Source handling", "md_docs_2references.html#autotoc_md69", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -131,10 +121,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_d_c_8h.html",
-"namespaceatmega328p_1_1clock.html#a3da9f728221dfcb1ea69920dc6593c28a2b55387dd066c5bac646ac61543d152d",
-"namespaceatmega328p_1_1package.html#ac61908e81ba456e3cf2328e55bfb3ab0aaa5efa995e1e876f132657b81e04e40f",
-"namespaceatmega328p_1_1power.html#a4bd923047bce30c6bfad17da020abdf3a834fe4f8ae3942f60ce1e2f182888de2",
-"namespaceatmega328p_1_1timer.html#a2e4eb2624d172772c611561442ab776bac23e2b09ebe6bf4cb5e2a9abe85c0be2"
+"namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a0e0a20879d04cbe2aa0340596e3e6a6e",
+"namespaceatmega328p_1_1package.html#aeae00d4b4f20667517097e25731bece5a160626589aafd0c938869bd04c22d1f8",
+"namespaceatmega328p_1_1power.html#a70120f04d4e502776319b17cea51f9cba07c4eb9fe5d089ec86f886a750ca14c7",
+"namespaceatmega328p_1_1timer.html#a38eb14e1d5468b88a275976407620287a32e5c176b7b2b0f2c19ca4c3921d524f"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

@@ -19,9 +19,9 @@ namespace atmega328p
         /** @brief Peripheral operating modes. */
         enum class Mode : uint8_t
         {
-            Asynchronous, ///< Asynchronous serial communication.
-            Synchronous,  ///< Clocked synchronous communication.
-            MasterSPI,    ///< USART in SPI master mode.
+            Asynchronous = 0,               ///< Asynchronous serial communication.
+            Synchronous = Asynchronous + 1, ///< Clocked synchronous communication.
+            MasterSPI = Synchronous + 1,    ///< USART in SPI master mode.
         };
 
         /** @brief USART frame data-bit counts. */
@@ -37,9 +37,9 @@ namespace atmega328p
         /** @brief USART parity modes. */
         enum class Parity : uint8_t
         {
-            Disabled, ///< No parity bit.
-            Even,     ///< Even parity.
-            Odd,      ///< Odd parity.
+            Disabled = 0,        ///< No parity bit.
+            Even = Disabled + 1, ///< Even parity.
+            Odd = Even + 1,      ///< Odd parity.
         };
 
         /** @brief USART frame stop-bit counts. */

@@ -18,9 +18,9 @@ namespace atmega328p
         /** @brief Fuse byte identifiers. */
         enum class Byte : uint8_t
         {
-            Low,      ///< Low fuse byte.
-            High,     ///< High fuse byte.
-            Extended, ///< Extended fuse byte.
+            Low = 0,             ///< Low fuse byte.
+            High = Low + 1,      ///< High fuse byte.
+            Extended = High + 1, ///< Extended fuse byte.
         };
 
         /** @brief Bit masks in the Low Fuse byte. */

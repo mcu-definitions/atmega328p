@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ATmega328p: No runtime implementation</title>
+<title>ATmega328p: No runtime behavior</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -109,30 +109,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2no-ru
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">No runtime implementation </div></div>
+  <div class="headertitle"><div class="title">No runtime behavior </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md71"></a></p>
-<p>This repository contains definitions only:</p>
-<ul>
-<li>namespaces, enums, and compile-time constants;</li>
-<li>device identity and feature macros;</li>
-<li>package and operating-grade selections;</li>
-<li>register addresses and bit positions;</li>
-<li>peripheral capabilities and hardware limits;</li>
-<li>Doxygen comments and documentation.</li>
-</ul>
-<p>It does not contain:</p>
-<ul>
-<li>peripheral drivers or initialization;</li>
-<li>register reads or writes;</li>
-<li>inline or ordinary functions;</li>
-<li>interrupt handlers;</li>
-<li>startup code;</li>
-<li>dynamic allocation or runtime lookup tables;</li>
-<li>build-system or programmer integration.</li>
-</ul>
-<p>A consuming library uses these definitions to implement behavior. That behavior and any runtime storage belong to the consuming library. </p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md65"></a></p>
+<p>The ATmega328P headers define compile-time hardware metadata only. They do not access volatile registers, install interrupt handlers, initialize peripherals or program fuses. Driver and board initialization code belongs to consuming firmware. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

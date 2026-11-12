@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespaceatmeg
 </div><!--header-->
 <div class="contents">
 
-<p>GPIO characteristics of the ATmega328P.  
+<p>GPIO characteristics.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:port" id="r_port"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceatmega328p_1_1gpio_1_1port.html">port</a></td></tr>
-<tr class="memdesc:namespaceatmega328p_1_1gpio_1_1port"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths and bit masks. <br /></td></tr>
+<tr class="memdesc:namespaceatmega328p_1_1gpio_1_1port"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#acc3ee253e8bbac508cc8dc89425212f8">Port</a> widths, valid masks and data-space addresses. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -134,18 +134,19 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc">has_global_pullup_disable</a> = 1
 , <br />
 &#160;&#160;<a class="el" href="#afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e">ports_tristated_during_reset</a> = 1
+, <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a716b042233bb1e752ad2dbf67109d7ee">has_adc_digital_input_disable</a> = 1
 , <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6">has_digital_input_disable_adc0_to_adc5</a> = 1
 , <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2">has_digital_input_disable_ain0_ain1</a> = 1
-, <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635">has_adc6_adc7_digital_input_buffer</a> = 0
 , <br />
-&#160;&#160;<a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d">pc6_requires_rstdisbl</a> = 1
+&#160;&#160;<a class="el" href="#afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635">has_adc6_adc7_digital_input_buffer</a> = 0
+, <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d">pc6_requires_rstdisbl</a> = 1
 , <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432">pc6_is_reset_by_default</a> = 1
 , <a class="el" href="#afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075">pb6_pb7_may_be_used_by_system_clock</a> = 1
 <br />
  }</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>GPIO characteristics of the ATmega328P. </p>
+<div class="textblock"><p>GPIO characteristics. </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="acc3ee253e8bbac508cc8dc89425212f8" name="acc3ee253e8bbac508cc8dc89425212f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc3ee253e8bbac508cc8dc89425212f8">&#9670;&#160;</a></span>Port</h2>
@@ -174,28 +175,18 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ab6c47b8bc85e3a05db0316ab371b32b7" name="afea4bb037cc7e974da1ed787e3286a20ab6c47b8bc85e3a05db0316ab371b32b7"></a>port_count&#160;</td><td class="fielddoc"><p>Number of GPIO ports. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a68e361d6d764a697ec8bc8ae4b11e8a3" name="afea4bb037cc7e974da1ed787e3286a20a68e361d6d764a697ec8bc8ae4b11e8a3"></a>has_internal_pullups&#160;</td><td class="fielddoc"><p>Internal pullups available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a5e03f02a6dc1aa0aa32ec9a3ceb3f655" name="afea4bb037cc7e974da1ed787e3286a20a5e03f02a6dc1aa0aa32ec9a3ceb3f655"></a>pullups_selectable_per_pin&#160;</td><td class="fielddoc"><p>Pullups selectable per pin. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc" name="afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc"></a>has_global_pullup_disable&#160;</td><td class="fielddoc"><p>Global pullup disable available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e" name="afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e"></a>ports_tristated_during_reset&#160;</td><td class="fielddoc"><p>Ports tristated during reset. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6" name="afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6"></a>has_digital_input_disable_adc0_to_adc5&#160;</td><td class="fielddoc"><p>Digital input disable adc0 to adc5 available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2" name="afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2"></a>has_digital_input_disable_ain0_ain1&#160;</td><td class="fielddoc"><p>Digital input disable ain0 ain1 available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635" name="afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635"></a>has_adc6_adc7_digital_input_buffer&#160;</td><td class="fielddoc"><p>Adc6 adc7 digital input buffer available. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d" name="afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d"></a>pc6_requires_rstdisbl&#160;</td><td class="fielddoc"><p>PC6 requires RSTDISBL. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432" name="afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432"></a>pc6_is_reset_by_default&#160;</td><td class="fielddoc"><p>PC6 is reset by default. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075" name="afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075"></a>pb6_pb7_may_be_used_by_system_clock&#160;</td><td class="fielddoc"><p>PB6 PB7 may be used by system clock. </p>
-</td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ab6c47b8bc85e3a05db0316ab371b32b7" name="afea4bb037cc7e974da1ed787e3286a20ab6c47b8bc85e3a05db0316ab371b32b7"></a>port_count&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a68e361d6d764a697ec8bc8ae4b11e8a3" name="afea4bb037cc7e974da1ed787e3286a20a68e361d6d764a697ec8bc8ae4b11e8a3"></a>has_internal_pullups&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a5e03f02a6dc1aa0aa32ec9a3ceb3f655" name="afea4bb037cc7e974da1ed787e3286a20a5e03f02a6dc1aa0aa32ec9a3ceb3f655"></a>pullups_selectable_per_pin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc" name="afea4bb037cc7e974da1ed787e3286a20a8dbe351492d1a0a7060a69448426c0bc"></a>has_global_pullup_disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e" name="afea4bb037cc7e974da1ed787e3286a20ad5a1bd153c4586f80e238fbd459c3c1e"></a>ports_tristated_during_reset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a716b042233bb1e752ad2dbf67109d7ee" name="afea4bb037cc7e974da1ed787e3286a20a716b042233bb1e752ad2dbf67109d7ee"></a>has_adc_digital_input_disable&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6" name="afea4bb037cc7e974da1ed787e3286a20a522073c2b53fbdb83d0295a875e6f4b6"></a>has_digital_input_disable_adc0_to_adc5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2" name="afea4bb037cc7e974da1ed787e3286a20ab399c395245c69d9ce36c3ac49c3b2c2"></a>has_digital_input_disable_ain0_ain1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635" name="afea4bb037cc7e974da1ed787e3286a20af5ba569a2bf74a28e221dd546a099635"></a>has_adc6_adc7_digital_input_buffer&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d" name="afea4bb037cc7e974da1ed787e3286a20a77d95cd62c80be9ab04144cc80b7ac6d"></a>pc6_requires_rstdisbl&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432" name="afea4bb037cc7e974da1ed787e3286a20a6202808ecf368f60e648f4bdfdcdf432"></a>pc6_is_reset_by_default&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075" name="afea4bb037cc7e974da1ed787e3286a20a01763dca158212ce881384c532a98075"></a>pb6_pb7_may_be_used_by_system_clock&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

@@ -112,52 +112,31 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2getti
   <div class="headertitle"><div class="title">Getting started </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md16"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
-Include the definitions</h1>
-<p>Add the repository's <span class="tt">include</span> directory to the compiler include path, then include the aggregate header:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_a_tmega328_p_8h.html">atmega328p/ATmega328P.h</a>&gt;</span></div>
-<div class="ttc" id="a_a_tmega328_p_8h_html"><div class="ttname"><a href="_a_tmega328_p_8h.html">ATmega328P.h</a></div><div class="ttdoc">Aggregate include for all ATmega328P definitions.</div></div>
-</div><!-- fragment --><p>For a smaller dependency, include only the required module header.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
-Create MCUConfig.h</h1>
-<p>Keep the selected MCU and board-specific values in one configuration header owned by the consuming firmware:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#ifndef MCU_CONFIG_H</span></div>
-<div class="line"><span class="preprocessor">#define MCU_CONFIG_H</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define MCU_PACKAGE_PDIP28</span></div>
+<div class="textblock"><p><a class="anchor" id="autotoc_md13"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Include</h1>
+<p>Add <span class="tt">include/</span> to the compiler's include path and import the aggregate header or the specific modules you need.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#define MCU_PACKAGE_PDIP28</span></div>
 <div class="line"><span class="preprocessor">#define MCU_GRADE_INDUSTRIAL_85C</span></div>
-<div class="line"> </div>
 <div class="line"><span class="preprocessor">#define MCU_CLOCK_HZ 1000000UL</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_LOW 0x62</span></div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_HIGH 0xD9</span></div>
-<div class="line"><span class="preprocessor">#define MCU_FUSE_EXT 0xFF</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_a_tmega328_p_8h.html">atmega328p/ATmega328P.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_a_tmega328_p_8h_html"><div class="ttname"><a href="_a_tmega328_p_8h.html">ATmega328P.h</a></div><div class="ttdoc">Aggregate include for all ATmega328P definitions.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><p>This is an example configuration. Confirm the package, ordering grade, oscillator, clock frequency, and fuse bytes for the actual board.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
-Use the common MCU alias</h1>
-<p>The <span class="tt">mcu</span> alias gives peripheral libraries a consistent way to access the selected device:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;MCUConfig.h&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> led = mcu::pin::Pin::PB5;</div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> pwm = mcu::pwm::Channel::OC1A;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::gpio::port_count == 3, <span class="stringliteral">&quot;GPIO ports&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::memory::flash_size_bytes == 32768UL, <span class="stringliteral">&quot;Flash size&quot;</span>);</div>
-</div><!-- fragment --><p>For another device, the configuration header includes that device's definitions and changes the alias:</p>
-<div class="fragment"><div class="line"><span class="keyword">namespace </span>mcu = atmega8a;</div>
-</div><!-- fragment --><p>A common peripheral library can keep using <span class="tt">mcu::gpio</span>, <span class="tt">mcu::timer</span>, <span class="tt">mcu::pwm</span>, and the other agreed namespaces.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
-Compile-time checks</h1>
-<p>The <span class="tt">tests</span> directory contains compile-only tests for the public headers, package selections, grade selections, and invalid configurations. Run <span class="tt">tests/run_tests.sh</span> with a C++11 compiler on Linux or macOS, or <span class="tt">tests/run_tests.bat</span> on Windows with <span class="tt">g++</span> in <span class="tt">PATH</span>.</p>
-<p>This repository does not configure the build system, program fuses, or upload firmware. </p>
+</div><!-- fragment --><p>The definitions use C++11 and do not require a runtime library.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+Read hardware metadata</h1>
+<div class="fragment"><div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> ports = mcu::gpio::port_count;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> flash = mcu::memory::flash_size_bytes;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> pin = mcu::pin::Pin::PB5;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> port_b_input = mcu::gpio::port::b_input_register;</div>
+</div><!-- fragment --><p><span class="tt">pin::Pin</span> identifies a logical MCU signal, not a board connector or package terminal. Register addresses are data-space addresses, not references to volatile registers.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Configuration</h1>
+<p>Define the target package, operating grade and board clock before including the device headers. Fuse values are board-specific and should only be supplied when known.</p>
+<p>See <a class="el" href="md_docs_2configuration_2mcu-config.html" title="MCUConfig.h">MCUConfig.h</a> and the <a class="el" href="index.html#md_docs_2index" title="ATmega328P reference">Module reference</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

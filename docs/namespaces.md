@@ -1,73 +1,44 @@
-# Namespace map
+# Namespaces
 
-All device-specific definitions are inside `atmega328p`.
+All public definitions are under `atmega328p`. The consuming application may define `namespace mcu = atmega328p;` for concise access.
 
-The repository provides 32 module namespaces:
-
-| Namespace | Header | Main contents |
+| Namespace | Header | Contents |
 |---|---|---|
-| `adc` | `ADC.h` | ADC channels, references, triggers |
-| `analog_comparator` | `AnalogComparator.h` | Comparator inputs and modes |
-| `architecture` | `Architecture.h` | AVR8 architecture |
-| `bootloader` | `Bootloader.h` | Boot section geometry |
-| `clock` | `Clock.h` | Clock sources and prescalers |
-| `cpu` | `CPU.h` | CPU registers and flags |
-| `debugwire` | `DebugWire.h` | debugWIRE characteristics |
-| `device` | `Device.h` | Signature and resource counts |
-| `eeprom` | `EEPROM.h` | EEPROM geometry |
-| `electrical` | `Electrical.h` | Electrical limits and grades |
-| `errata` | `Errata.h` | Errata and silicon revisions |
-| `external_interrupts` | `ExternalInterrupts.h` | INT0/INT1 and PCINT |
-| `fuse` | `Fuse.h` | Fuse fields and masks |
-| `gpio` | `GPIO.h` | GPIO port characteristics |
-| `interrupts` | `Interrupts.h` | Vector table |
-| `lock_bits` | `LockBits.h` | Lock-bit masks |
-| `memory` | `Memory.h` | Flash, SRAM, EEPROM |
-| `package` | `Package.h`, `PackagePins.h` | Package and terminal data |
-| `pin` | `Pin.h`, `PinFunctions.h` | Logical pins and capabilities |
-| `power` | `Power.h` | Sleep and power reduction |
-| `programming` | `Programming.h` | Programming interface metadata |
-| `pwm` | `PWM.h` | PWM channels |
-| `qtouch` | `QTouch.h` | QTouch support |
-| `register_bits` | `RegisterBits.h` | Register bit positions |
-| `register_map` | `RegisterMap.h` | Register addresses |
-| `reset` | `Reset.h` | Reset and BOD |
-| `rtc` | `RTC.h` | Timer2 asynchronous clock |
-| `spi` | `SPI.h` | SPI modes and divisors |
-| `timer` | `Timer.h` | Timer/counter modes |
-| `twi` | `TWI.h` | Two-wire interface |
-| `usart` | `USART.h` | USART modes and frame format |
-| `watchdog` | `Watchdog.h` | Watchdog timeouts |
+| `atmega328p::device` | `Device.h` | Hardware resource counts and capabilities |
+| `atmega328p::architecture` | `Architecture.h` | AVR8 architecture metadata |
+| `atmega328p::cpu` | `CPU.h` | CPU registers and flags |
+| `atmega328p::memory` | `Memory.h` | Memory geometry |
+| `atmega328p::eeprom` | `EEPROM.h` | EEPROM geometry |
+| `atmega328p::register_bits` | `RegisterBits.h` | Register bit fields |
+| `atmega328p::register_map` | `RegisterMap.h` | Register data-space addresses |
+| `atmega328p::package` | `Package.h` | Physical packages |
+| `atmega328p::pin` | `Pin.h` | Logical pins and ports |
+| `atmega328p::gpio` | `GPIO.h` | GPIO capabilities and registers |
+| `atmega328p::clock` | `Clock.h` | Clock sources and prescalers |
+| `atmega328p::timer` | `Timer.h` | Timers and modes |
+| `atmega328p::rtc` | `RTC.h` | Asynchronous counter |
+| `atmega328p::pwm` | `PWM.h` | PWM channels |
+| `atmega328p::adc` | `ADC.h` | ADC channels and references |
+| `atmega328p::analog_comparator` | `AnalogComparator.h` | Comparator characteristics |
+| `atmega328p::usart` | `USART.h` | Serial channels |
+| `atmega328p::spi` | `SPI.h` | SPI modes and capabilities |
+| `atmega328p::twi` | `TWI.h` | Two-wire interface |
+| `atmega328p::interrupts` | `Interrupts.h` | Interrupt vectors |
+| `atmega328p::external_interrupts` | `ExternalInterrupts.h` | External and pin-change interrupts |
+| `atmega328p::watchdog` | `Watchdog.h` | Watchdog timer |
+| `atmega328p::power` | `Power.h` | Power and sleep modes |
+| `atmega328p::reset` | `Reset.h` | Reset and brownout |
+| `atmega328p::fuse` | `Fuse.h` | Fuse fields |
+| `atmega328p::lock_bits` | `LockBits.h` | Protection bits |
+| `atmega328p::bootloader` | `Bootloader.h` | Boot section geometry |
+| `atmega328p::programming` | `Programming.h` | Programming metadata |
+| `atmega328p::qtouch` | `QTouch.h` | Touch metadata |
+| `atmega328p::electrical` | `Electrical.h` | Electrical limits |
+| `atmega328p::errata` | `Errata.h` | Silicon errata |
+| `atmega328p::debugwire` | `DebugWire.h` | debugWIRE characteristics |
 
 ## Nested namespaces
 
-- `gpio::port` contains port widths and masks.
-- `pin::capabilities` contains capability values for individual pins.
-- `package::pdip28`, `mlf28`, `tqfp32`, and `mlf32` contain package-specific data.
-- `package::selected` refers to the package selected in `MCUConfig.h`.
-- `electrical::industrial_85c`, `industrial_105c`, and `automotive_125c` contain operating profiles.
-- `electrical::selected` refers to the selected operating grade.
-- `timer::timer0`, `timer1`, and `timer2` describe individual timer units.
-- `register_bits` contains one nested namespace per register.
+Modules may include subnamespaces for individual peripherals, ports, registers, package variants or operating grades. The available names reflect the hardware of the ATmega328P.
 
-The root aliases `atmega328p::Pin` and `atmega328p::Port` remain available. Prefer the explicit `atmega328p::pin` namespace in new code.
-
-## Common interface across MCU repositories
-
-Each MCU repository keeps its own root namespace (`atmega328p`, `atmega8a`, `attiny85`, and so on), but should use the same module namespaces and common member names where the hardware supports them.
-
-The consuming project's `MCUConfig.h` defines one alias:
-
-```cpp
-namespace mcu = atmega328p;
-```
-
-A different MCU changes only the alias:
-
-```cpp
-namespace mcu = atmega8a;
-```
-
-Common peripheral libraries then use the same interface, for example `mcu::gpio::port_count`, `mcu::timer::timer_count`, and `mcu::memory::flash_size_bytes`.
-
-When a device does not contain a peripheral, its definitions repository should expose a zero count or a false capability where appropriate. This lets shared libraries check hardware support without depending on a device-specific namespace.
+`package::selected` identifies the package configured by the application. Logical pins remain independent of package terminal numbers.

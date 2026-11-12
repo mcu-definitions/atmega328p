@@ -18,10 +18,10 @@ namespace atmega328p
         /** @brief Supported operating grades. */
         enum class Grade : uint8_t
         {
-            Unspecified,    ///< No operating grade selected.
-            Industrial85C,  ///< Industrial grade, up to 85 C.
-            Industrial105C, ///< Industrial grade, up to 105 C.
-            Automotive125C, ///< Automotive grade, up to 125 C.
+            Unspecified = 0,                     ///< No operating grade selected.
+            Industrial85C = Unspecified + 1,     ///< Industrial grade, up to 85 C.
+            Industrial105C = Industrial85C + 1,  ///< Industrial grade, up to 105 C.
+            Automotive125C = Industrial105C + 1, ///< Automotive grade, up to 125 C.
         };
 
         enum : int16_t

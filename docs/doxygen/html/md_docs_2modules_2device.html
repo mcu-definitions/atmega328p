@@ -112,20 +112,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_2modul
   <div class="headertitle"><div class="title">Device.h </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md41"></a></p>
-<p><b>Purpose:</b> Device signature and resource counts.</p>
-<p>Namespace: <span class="tt"><a class="el" href="namespaceatmega328p_1_1device.html" title="General ATmega328P device information.">atmega328p::device</a></span></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md36"></a></p>
+<p><b>Purpose:</b> Device resources, peripheral capabilities and signature bytes.</p>
+<p>Namespace: <span class="tt"><a class="el" href="namespaceatmega328p_1_1device.html" title="Device information.">atmega328p::device</a></span></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_device_8h.html">atmega328p/Device.h</a>&gt;</span></div>
-<div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>mcu = <a class="code hl_namespace" href="namespaceatmega328p.html">atmega328p</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::device::signature_byte_0 == 0x1E, <span class="stringliteral">&quot;Signature byte 0&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::device::signature_byte_1 == 0x95, <span class="stringliteral">&quot;Signature byte 1&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::device::signature_byte_2 == 0x0F, <span class="stringliteral">&quot;Signature byte 2&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(mcu::device::timer_count == 3, <span class="stringliteral">&quot;Timer count&quot;</span>);</div>
-<div class="ttc" id="a_device_8h_html"><div class="ttname"><a href="_device_8h.html">Device.h</a></div><div class="ttdoc">Device identity and peripheral counts.</div></div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> lines = mcu::device::programmable_io_line_count;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> timers = mcu::device::timer_count;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> has_adc = mcu::device::has_adc;</div>
+<div class="ttc" id="a_device_8h_html"><div class="ttname"><a href="_device_8h.html">Device.h</a></div><div class="ttdoc">Hardware resources, capabilities and device signature.</div></div>
 <div class="ttc" id="anamespaceatmega328p_html"><div class="ttname"><a href="namespaceatmega328p.html">atmega328p</a></div><div class="ttdoc">Device-specific definitions for the ATmega328P.</div><div class="ttdef"><b>Definition</b> ADC.h:14</div></div>
-</div><!-- fragment --><p>The signature bytes identify the device. The counts summarize resources such as timers, PWM channels, ADC channels, and interrupt vectors. </p>
+</div><!-- fragment --><p>Count values describe the device's hardware resources; <span class="tt">has_*</span> flags expose supported features. Board configuration can reserve signals for reset, clocks or other functions. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

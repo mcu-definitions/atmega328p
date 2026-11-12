@@ -13,13 +13,14 @@ var searchData=
   ['lock_2dbits_2emd_10',['lock-bits.md',['../lock-bits_8md.html',1,'']]],
   ['lockbits_20h_11',['LockBits.h',['../md_docs_2modules_2lock-bits.html',1,'']]],
   ['lockbits_2eh_12',['LockBits.h',['../_lock_bits_8h.html',1,'']]],
-  ['low_13',['Low',['../namespaceatmega328p_1_1fuse.html#a5cafe87b0a4e09ad91b581572f036956a28d0edd045e05cf5af64e35ae0c4c6ef',1,'atmega328p::fuse']]],
-  ['lowfrequencycrystal_14',['LowFrequencyCrystal',['../namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a84efe54515f689aa61cf4769914d378d',1,'atmega328p::clock']]],
-  ['lowfrequencycrystalmaximum_15',['LowFrequencyCrystalMaximum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a1ae9065fa0bf02eece663b3260c19a2b',1,'atmega328p::clock']]],
-  ['lowfrequencycrystalminimum_16',['LowFrequencyCrystalMinimum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a58a73cbbae851bd3582aa2d94d66fcb9',1,'atmega328p::clock']]],
-  ['lowlevel_17',['LowLevel',['../namespaceatmega328p_1_1external__interrupts.html#a413ee55c5fe78b600b3b3472a0272efbafc95fd21f661b220b8cce14419f2d352',1,'atmega328p::external_interrupts']]],
-  ['lowmask_18',['LowMask',['../namespaceatmega328p_1_1fuse.html#ac39528589f0e1e7241c41d1455d0359c',1,'atmega328p::fuse']]],
-  ['lowpowercrystal_19',['LowPowerCrystal',['../namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067ab99a5af6b2bbba59e0c1479b06bddd08',1,'atmega328p::clock']]],
-  ['lowpowercrystalmaximum_20',['LowPowerCrystalMaximum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a0e0a20879d04cbe2aa0340596e3e6a6e',1,'atmega328p::clock']]],
-  ['lowpowercrystalminimum_21',['LowPowerCrystalMinimum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a25010bd2070875424d38310ad2ea5a85',1,'atmega328p::clock']]]
+  ['logical_20pins_20and_20packages_13',['Logical pins and packages',['../md_docs_2definitions.html#autotoc_md11',1,'']]],
+  ['low_14',['Low',['../namespaceatmega328p_1_1fuse.html#a5cafe87b0a4e09ad91b581572f036956a28d0edd045e05cf5af64e35ae0c4c6ef',1,'atmega328p::fuse']]],
+  ['lowfrequencycrystal_15',['LowFrequencyCrystal',['../namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067a84efe54515f689aa61cf4769914d378d',1,'atmega328p::clock']]],
+  ['lowfrequencycrystalmaximum_16',['LowFrequencyCrystalMaximum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a1ae9065fa0bf02eece663b3260c19a2b',1,'atmega328p::clock']]],
+  ['lowfrequencycrystalminimum_17',['LowFrequencyCrystalMinimum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a58a73cbbae851bd3582aa2d94d66fcb9',1,'atmega328p::clock']]],
+  ['lowlevel_18',['LowLevel',['../namespaceatmega328p_1_1external__interrupts.html#a413ee55c5fe78b600b3b3472a0272efbafc95fd21f661b220b8cce14419f2d352',1,'atmega328p::external_interrupts']]],
+  ['lowmask_19',['LowMask',['../namespaceatmega328p_1_1fuse.html#ac39528589f0e1e7241c41d1455d0359c',1,'atmega328p::fuse']]],
+  ['lowpowercrystal_20',['LowPowerCrystal',['../namespaceatmega328p_1_1clock.html#ac8d0676bc7bc363eb4c867b656381067ab99a5af6b2bbba59e0c1479b06bddd08',1,'atmega328p::clock']]],
+  ['lowpowercrystalmaximum_21',['LowPowerCrystalMaximum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a0e0a20879d04cbe2aa0340596e3e6a6e',1,'atmega328p::clock']]],
+  ['lowpowercrystalminimum_22',['LowPowerCrystalMinimum',['../namespaceatmega328p_1_1clock.html#a3fd61cb4eed129db621cb03950eb8d78a25010bd2070875424d38310ad2ea5a85',1,'atmega328p::clock']]]
 ];

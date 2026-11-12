@@ -1,18 +1,16 @@
 # Device.h
 
-**Purpose:** Device signature and resource counts.
+**Purpose:** Device resources, peripheral capabilities and signature bytes.
 
 Namespace: `atmega328p::device`
 
 ```cpp
 #include <atmega328p/Device.h>
-
 namespace mcu = atmega328p;
 
-static_assert(mcu::device::signature_byte_0 == 0x1E, "Signature byte 0");
-static_assert(mcu::device::signature_byte_1 == 0x95, "Signature byte 1");
-static_assert(mcu::device::signature_byte_2 == 0x0F, "Signature byte 2");
-static_assert(mcu::device::timer_count == 3, "Timer count");
+constexpr auto lines = mcu::device::programmable_io_line_count;
+constexpr auto timers = mcu::device::timer_count;
+constexpr auto has_adc = mcu::device::has_adc;
 ```
 
-The signature bytes identify the device. The counts summarize resources such as timers, PWM channels, ADC channels, and interrupt vectors.
+Count values describe the device's hardware resources; `has_*` flags expose supported features. Board configuration can reserve signals for reset, clocks or other functions.

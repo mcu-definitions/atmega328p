@@ -1,63 +1,44 @@
-# ATmega328p hardware definitions
+# ATmega328P
 
-A header-only C++11 library containing hardware definitions for the ATmega328P.
+Hardware definitions for the ATmega328P microcontroller.
 
-The library describes the device, package terminals, logical pins, memory, registers, peripherals, clock sources, interrupts, fuses, electrical limits, and errata.
+Header-only C++11 library describing registers, memory, GPIO, peripherals, package pins, clock sources, interrupts, fuses, electrical characteristics and errata.
 
-It contains definitions only. It does not provide peripheral drivers, register access, initialization, or programmer integration.
+No hardware access, drivers or initialization code is included.
 
-## Include
-
-```cpp
-#include <atmega328p/ATmega328P.h>
-```
-
-For a smaller dependency, include only the required module:
-
-```cpp
-#include <atmega328p/Pin.h>
-#include <atmega328p/GPIO.h>
-#include <atmega328p/Memory.h>
-```
-
-## MCUConfig.h
-
-The consuming project selects its package and operating grade and records its clock and fuse values:
+## Usage
 
 ```cpp
 #define MCU_PACKAGE_PDIP28
 #define MCU_GRADE_INDUSTRIAL_85C
-
 #define MCU_CLOCK_HZ 1000000UL
-
-#define MCU_FUSE_LOW 0x62
-#define MCU_FUSE_HIGH 0xD9
-#define MCU_FUSE_EXT 0xFF
 
 #include <atmega328p/ATmega328P.h>
 
 namespace mcu = atmega328p;
 ```
 
-This is a reference example. Verify the physical device and board configuration before using the values.
-
-## Common MCU interface
-
-Peripheral libraries should use the `mcu` alias:
+For smaller includes, import the required module directly:
 
 ```cpp
-mcu::gpio::port_count
-mcu::timer::timer_count
-mcu::pwm::channel_count
-mcu::memory::flash_size_bytes
+#include <atmega328p/Pin.h>
+#include <atmega328p/GPIO.h>
+#include <atmega328p/RegisterMap.h>
 ```
 
-Other MCU definition repositories should follow the same namespace and member naming conventions. Their configuration header changes the alias, not the common peripheral library.
+The project selects its package, operating grade and clock. Clock and fuse settings must match the physical board.
+
+## Structure
+
+- `include/atmega328p/` — hardware definitions.
+- `docs/` — technical reference and module documentation.
+- `examples/` — usage examples.
+- `Doxyfile` — API documentation configuration.
 
 ## Documentation
 
-Start with [Getting started](docs/getting-started.md), then see the [namespace map](docs/namespaces.md), [MCU configuration](docs/configuration/mcu-config.md), and [module reference](docs/index.md).
+[Getting started](docs/getting-started.md) · [Module reference](docs/index.md) · [Technical references](docs/references.md)
 
-## Scope
+## License
 
-The library does not integrate with AVR-GCC, AVRDUDE, an IDE, or a programmer. It provides the definitions that consuming firmware and peripheral libraries can use.
+See [LICENSE](LICENSE).

@@ -26,10 +26,10 @@ namespace atmega328p
         /** @brief External interrupt trigger modes. */
         enum class Trigger : uint8_t
         {
-            LowLevel,         ///< Interrupt while input is low.
-            AnyLogicalChange, ///< Interrupt on either transition.
-            FallingEdge,      ///< Interrupt on high-to-low transition.
-            RisingEdge,       ///< Interrupt on low-to-high transition.
+            LowLevel = 0,                       ///< Interrupt while input is low.
+            AnyLogicalChange = LowLevel + 1,    ///< Interrupt on either transition.
+            FallingEdge = AnyLogicalChange + 1, ///< Interrupt on high-to-low transition.
+            RisingEdge = FallingEdge + 1,       ///< Interrupt on low-to-high transition.
         };
 
         /** @brief Logical pin identifiers for INT0 and INT1. */
@@ -42,9 +42,9 @@ namespace atmega328p
         /** @brief Pin-change interrupt groups. */
         enum class PinChangeGroup : uint8_t
         {
-            PCINT0, ///< Pin-change interrupt source 0.
-            PCINT1, ///< Pin-change interrupt source 1.
-            PCINT2, ///< Pin-change interrupt source 2.
+            PCINT0 = 0,          ///< Pin-change interrupt source 0.
+            PCINT1 = PCINT0 + 1, ///< Pin-change interrupt source 1.
+            PCINT2 = PCINT1 + 1, ///< Pin-change interrupt source 2.
         };
 
         enum : uint8_t

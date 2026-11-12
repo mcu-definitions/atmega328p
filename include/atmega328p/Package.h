@@ -19,19 +19,19 @@ namespace atmega328p
         /** @brief Supported ATmega328P package types. */
         enum class Type : uint8_t
         {
-            Unspecified, ///< No package selected.
-            PDIP28,      ///< 28-pin through-hole package.
-            MLF28,       ///< 28-pad leadless package.
-            TQFP32,      ///< 32-pin quad flat package.
-            MLF32,       ///< 32-pad leadless package.
+            Unspecified = 0,          ///< No package selected.
+            PDIP28 = Unspecified + 1, ///< 28-pin through-hole package.
+            MLF28 = PDIP28 + 1,       ///< 28-pad leadless package.
+            TQFP32 = MLF28 + 1,       ///< 32-pin quad flat package.
+            MLF32 = TQFP32 + 1,       ///< 32-pad leadless package.
         };
 
         /** @brief MLF32 manufacturing styles with different land patterns. */
         enum class MLF32Style : uint8_t
         {
-            Unspecified,     ///< Land-pattern style not selected.
-            PunchSingulated, ///< Punch-singulated leadless package.
-            SawSingulated,   ///< Saw-singulated leadless package.
+            Unspecified = 0,                     ///< Land-pattern style not selected.
+            PunchSingulated = Unspecified + 1,   ///< Punch-singulated leadless package.
+            SawSingulated = PunchSingulated + 1, ///< Saw-singulated leadless package.
         };
 
         /** @brief PDIP-28 package characteristics. */

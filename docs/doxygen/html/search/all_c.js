@@ -1,14 +1,14 @@
 var searchData=
 [
   ['n_0',['n',['../namespaceatmega328p_1_1register__bits_1_1sreg.html#a6487b792f9fc91206d3e50c87daa41b0a836da90854fd879545589f887eca0f0f',1,'atmega328p::register_bits::sreg']]],
-  ['namespace_20map_1',['Namespace map',['../md_docs_2namespaces.html',1,'']]],
-  ['namespaces_2',['Nested namespaces',['../md_docs_2namespaces.html#autotoc_md69',1,'']]],
+  ['namespaces_1',['Namespaces',['../md_docs_2namespaces.html',1,'']]],
+  ['namespaces_2',['Nested namespaces',['../md_docs_2namespaces.html#autotoc_md64',1,'']]],
   ['namespaces_2emd_3',['namespaces.md',['../namespaces_8md.html',1,'']]],
   ['negative_4',['Negative',['../namespaceatmega328p_1_1cpu.html#aaa177b245277e945aa80b0ed98dea89eaffb9356ff2b7da85c75c92fa7ea03b8b',1,'atmega328p::cpu']]],
   ['negative_5finput_5fpin_5fvalue_5',['negative_input_pin_value',['../namespaceatmega328p_1_1analog__comparator.html#ac6e36a65796449a0d4281e6aedf14d78a8067619792b494908490ddb3f995cc56',1,'atmega328p::analog_comparator']]],
-  ['nested_20namespaces_6',['Nested namespaces',['../md_docs_2namespaces.html#autotoc_md69',1,'']]],
+  ['nested_20namespaces_6',['Nested namespaces',['../md_docs_2namespaces.html#autotoc_md64',1,'']]],
   ['nine_7',['Nine',['../namespaceatmega328p_1_1usart.html#a40b20a3f290be513c6e908d00b61575ea24db11216549ee55172c33cf3def2f3f',1,'atmega328p::usart']]],
-  ['no_20runtime_20implementation_8',['No runtime implementation',['../md_docs_2no-runtime-code.html',1,'No runtime implementation'],['../md_docs_2definitions.html#autotoc_md15',1,'No runtime implementation']]],
+  ['no_20runtime_20behavior_8',['No runtime behavior',['../md_docs_2no-runtime-code.html',1,'']]],
   ['no_2druntime_2dcode_2emd_9',['no-runtime-code.md',['../no-runtime-code_8md.html',1,'']]],
   ['none_10',['None',['../namespaceatmega328p_1_1package_1_1unspecified.html#a5c1b1231e139364213e91a016407730dacd5edc14ab09988549c74a22aa63f67d',1,'atmega328p::package::unspecified::None'],['../namespaceatmega328p_1_1pin.html#a44dc09747dd39c6e94de32b89e6056d9a4d7f2c987bd7f2376d0ad13b91c52072',1,'atmega328p::pin::None']]],
   ['noprescaling_11',['NoPrescaling',['../namespaceatmega328p_1_1timer.html#a1cd9c0377c975a9481bcf3b3c23fd4eda0594408b5b78ea05a8eaf7807ad7c6c0',1,'atmega328p::timer::NoPrescaling'],['../namespaceatmega328p_1_1timer.html#a2e4eb2624d172772c611561442ab776ba0594408b5b78ea05a8eaf7807ad7c6c0',1,'atmega328p::timer::NoPrescaling']]],

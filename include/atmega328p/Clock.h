@@ -19,21 +19,21 @@ namespace atmega328p
         /** @brief Clock or interrupt source identifiers. */
         enum class Source : uint8_t
         {
-            ExternalClock,        ///< External clock on XTAL1.
-            LowPowerCrystal,      ///< Low-power crystal oscillator.
-            FullSwingCrystal,     ///< Full-swing crystal oscillator.
-            LowFrequencyCrystal,  ///< Low-frequency crystal oscillator.
-            InternalCalibratedRC, ///< Calibrated internal RC oscillator.
-            Internal128kHzRC,     ///< Internal nominal 128 kHz RC oscillator.
+            ExternalClock = 0,                              ///< External clock on XTAL1.
+            LowPowerCrystal = ExternalClock + 1,            ///< Low-power crystal oscillator.
+            FullSwingCrystal = LowPowerCrystal + 1,         ///< Full-swing crystal oscillator.
+            LowFrequencyCrystal = FullSwingCrystal + 1,     ///< Low-frequency crystal oscillator.
+            InternalCalibratedRC = LowFrequencyCrystal + 1, ///< Calibrated internal RC oscillator.
+            Internal128kHzRC = InternalCalibratedRC + 1,    ///< Internal nominal 128 kHz RC oscillator.
         };
 
         /** @brief Clock domains. */
         enum class Domain : uint8_t
         {
-            CPU,   ///< CPU clock domain.
-            IO,    ///< I/O peripheral clock domain.
-            Flash, ///< Flash memory clock domain.
-            ADC,   ///< ADC clock domain.
+            CPU = 0,         ///< CPU clock domain.
+            IO = CPU + 1,    ///< I/O peripheral clock domain.
+            Flash = IO + 1,  ///< Flash memory clock domain.
+            ADC = Flash + 1, ///< ADC clock domain.
         };
 
         /** @brief Clock-source fuse encodings. */

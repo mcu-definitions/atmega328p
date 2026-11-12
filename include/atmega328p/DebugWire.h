@@ -3,8 +3,8 @@
  * @brief debugWIRE pin and fuse characteristics.
  */
 
-#ifndef ATMEGA328P_DEFINITIONS_DEBUGWIRE_H
-#define ATMEGA328P_DEFINITIONS_DEBUGWIRE_H
+#ifndef ATMEGA328P_DEFINITIONS_DEBUG_WIRE_H
+#define ATMEGA328P_DEFINITIONS_DEBUG_WIRE_H
 
 #include <stdint.h>
 #include "Config.h"
