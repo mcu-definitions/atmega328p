@@ -28,13 +28,6 @@ For smaller includes, import the required module directly:
 
 The project selects its package, operating grade and clock. Clock and fuse settings must match the physical board.
 
-## Structure
-
-- `include/atmega328p/` — hardware definitions.
-- `docs/` — technical reference and module documentation.
-- `examples/` — usage examples.
-- `Doxyfile` — API documentation configuration.
-
 ## Documentation
 
 [Getting started](docs/getting-started.md) · [Module reference](docs/index.md) · [Technical references](docs/references.md)
